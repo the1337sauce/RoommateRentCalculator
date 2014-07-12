@@ -1,0 +1,471 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A76FBDFC1971B4C000D4426A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A76FBDFB1971B4C000D4426A /* Foundation.framework */; };
+		A76FBDFE1971B4C000D4426A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A76FBDFD1971B4C000D4426A /* CoreGraphics.framework */; };
+		A76FBE001971B4C000D4426A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A76FBDFF1971B4C000D4426A /* UIKit.framework */; };
+		A76FBE061971B4C000D4426A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A76FBE041971B4C000D4426A /* InfoPlist.strings */; };
+		A76FBE081971B4C000D4426A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A76FBE071971B4C000D4426A /* main.m */; };
+		A76FBE0C1971B4C000D4426A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A76FBE0B1971B4C000D4426A /* AppDelegate.m */; };
+		A76FBE0F1971B4C000D4426A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A76FBE0D1971B4C000D4426A /* Main.storyboard */; };
+		A76FBE121971B4C000D4426A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A76FBE111971B4C000D4426A /* ViewController.m */; };
+		A76FBE141971B4C000D4426A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A76FBE131971B4C000D4426A /* Images.xcassets */; };
+		A76FBE1B1971B4C000D4426A /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A76FBE1A1971B4C000D4426A /* XCTest.framework */; };
+		A76FBE1C1971B4C000D4426A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A76FBDFB1971B4C000D4426A /* Foundation.framework */; };
+		A76FBE1D1971B4C000D4426A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A76FBDFF1971B4C000D4426A /* UIKit.framework */; };
+		A76FBE251971B4C000D4426A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A76FBE231971B4C000D4426A /* InfoPlist.strings */; };
+		A76FBE271971B4C000D4426A /* RoommateRentCalculatorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A76FBE261971B4C000D4426A /* RoommateRentCalculatorTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A76FBE1E1971B4C000D4426A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A76FBDF01971B4C000D4426A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A76FBDF71971B4C000D4426A;
+			remoteInfo = RoommateRentCalculator;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		A76FBDF81971B4C000D4426A /* RoommateRentCalculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RoommateRentCalculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A76FBDFB1971B4C000D4426A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		A76FBDFD1971B4C000D4426A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		A76FBDFF1971B4C000D4426A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		A76FBE031971B4C000D4426A /* RoommateRentCalculator-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "RoommateRentCalculator-Info.plist"; sourceTree = "<group>"; };
+		A76FBE051971B4C000D4426A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		A76FBE071971B4C000D4426A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A76FBE091971B4C000D4426A /* RoommateRentCalculator-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RoommateRentCalculator-Prefix.pch"; sourceTree = "<group>"; };
+		A76FBE0A1971B4C000D4426A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		A76FBE0B1971B4C000D4426A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		A76FBE0E1971B4C000D4426A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A76FBE101971B4C000D4426A /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		A76FBE111971B4C000D4426A /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		A76FBE131971B4C000D4426A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		A76FBE191971B4C000D4426A /* RoommateRentCalculatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RoommateRentCalculatorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A76FBE1A1971B4C000D4426A /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		A76FBE221971B4C000D4426A /* RoommateRentCalculatorTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "RoommateRentCalculatorTests-Info.plist"; sourceTree = "<group>"; };
+		A76FBE241971B4C000D4426A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		A76FBE261971B4C000D4426A /* RoommateRentCalculatorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RoommateRentCalculatorTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A76FBDF51971B4C000D4426A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A76FBDFE1971B4C000D4426A /* CoreGraphics.framework in Frameworks */,
+				A76FBE001971B4C000D4426A /* UIKit.framework in Frameworks */,
+				A76FBDFC1971B4C000D4426A /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A76FBE161971B4C000D4426A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A76FBE1B1971B4C000D4426A /* XCTest.framework in Frameworks */,
+				A76FBE1D1971B4C000D4426A /* UIKit.framework in Frameworks */,
+				A76FBE1C1971B4C000D4426A /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A76FBDEF1971B4C000D4426A = {
+			isa = PBXGroup;
+			children = (
+				A76FBE011971B4C000D4426A /* RoommateRentCalculator */,
+				A76FBE201971B4C000D4426A /* RoommateRentCalculatorTests */,
+				A76FBDFA1971B4C000D4426A /* Frameworks */,
+				A76FBDF91971B4C000D4426A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A76FBDF91971B4C000D4426A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A76FBDF81971B4C000D4426A /* RoommateRentCalculator.app */,
+				A76FBE191971B4C000D4426A /* RoommateRentCalculatorTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A76FBDFA1971B4C000D4426A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A76FBDFB1971B4C000D4426A /* Foundation.framework */,
+				A76FBDFD1971B4C000D4426A /* CoreGraphics.framework */,
+				A76FBDFF1971B4C000D4426A /* UIKit.framework */,
+				A76FBE1A1971B4C000D4426A /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A76FBE011971B4C000D4426A /* RoommateRentCalculator */ = {
+			isa = PBXGroup;
+			children = (
+				A76FBE0A1971B4C000D4426A /* AppDelegate.h */,
+				A76FBE0B1971B4C000D4426A /* AppDelegate.m */,
+				A76FBE0D1971B4C000D4426A /* Main.storyboard */,
+				A76FBE101971B4C000D4426A /* ViewController.h */,
+				A76FBE111971B4C000D4426A /* ViewController.m */,
+				A76FBE131971B4C000D4426A /* Images.xcassets */,
+				A76FBE021971B4C000D4426A /* Supporting Files */,
+			);
+			path = RoommateRentCalculator;
+			sourceTree = "<group>";
+		};
+		A76FBE021971B4C000D4426A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A76FBE031971B4C000D4426A /* RoommateRentCalculator-Info.plist */,
+				A76FBE041971B4C000D4426A /* InfoPlist.strings */,
+				A76FBE071971B4C000D4426A /* main.m */,
+				A76FBE091971B4C000D4426A /* RoommateRentCalculator-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A76FBE201971B4C000D4426A /* RoommateRentCalculatorTests */ = {
+			isa = PBXGroup;
+			children = (
+				A76FBE261971B4C000D4426A /* RoommateRentCalculatorTests.m */,
+				A76FBE211971B4C000D4426A /* Supporting Files */,
+			);
+			path = RoommateRentCalculatorTests;
+			sourceTree = "<group>";
+		};
+		A76FBE211971B4C000D4426A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A76FBE221971B4C000D4426A /* RoommateRentCalculatorTests-Info.plist */,
+				A76FBE231971B4C000D4426A /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A76FBDF71971B4C000D4426A /* RoommateRentCalculator */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A76FBE2A1971B4C000D4426A /* Build configuration list for PBXNativeTarget "RoommateRentCalculator" */;
+			buildPhases = (
+				A76FBDF41971B4C000D4426A /* Sources */,
+				A76FBDF51971B4C000D4426A /* Frameworks */,
+				A76FBDF61971B4C000D4426A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RoommateRentCalculator;
+			productName = RoommateRentCalculator;
+			productReference = A76FBDF81971B4C000D4426A /* RoommateRentCalculator.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A76FBE181971B4C000D4426A /* RoommateRentCalculatorTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A76FBE2D1971B4C000D4426A /* Build configuration list for PBXNativeTarget "RoommateRentCalculatorTests" */;
+			buildPhases = (
+				A76FBE151971B4C000D4426A /* Sources */,
+				A76FBE161971B4C000D4426A /* Frameworks */,
+				A76FBE171971B4C000D4426A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A76FBE1F1971B4C000D4426A /* PBXTargetDependency */,
+			);
+			name = RoommateRentCalculatorTests;
+			productName = RoommateRentCalculatorTests;
+			productReference = A76FBE191971B4C000D4426A /* RoommateRentCalculatorTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A76FBDF01971B4C000D4426A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "Nates Lab";
+				TargetAttributes = {
+					A76FBE181971B4C000D4426A = {
+						TestTargetID = A76FBDF71971B4C000D4426A;
+					};
+				};
+			};
+			buildConfigurationList = A76FBDF31971B4C000D4426A /* Build configuration list for PBXProject "RoommateRentCalculator" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A76FBDEF1971B4C000D4426A;
+			productRefGroup = A76FBDF91971B4C000D4426A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A76FBDF71971B4C000D4426A /* RoommateRentCalculator */,
+				A76FBE181971B4C000D4426A /* RoommateRentCalculatorTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A76FBDF61971B4C000D4426A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A76FBE141971B4C000D4426A /* Images.xcassets in Resources */,
+				A76FBE061971B4C000D4426A /* InfoPlist.strings in Resources */,
+				A76FBE0F1971B4C000D4426A /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A76FBE171971B4C000D4426A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A76FBE251971B4C000D4426A /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A76FBDF41971B4C000D4426A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A76FBE121971B4C000D4426A /* ViewController.m in Sources */,
+				A76FBE0C1971B4C000D4426A /* AppDelegate.m in Sources */,
+				A76FBE081971B4C000D4426A /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A76FBE151971B4C000D4426A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A76FBE271971B4C000D4426A /* RoommateRentCalculatorTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A76FBE1F1971B4C000D4426A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A76FBDF71971B4C000D4426A /* RoommateRentCalculator */;
+			targetProxy = A76FBE1E1971B4C000D4426A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		A76FBE041971B4C000D4426A /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A76FBE051971B4C000D4426A /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		A76FBE0D1971B4C000D4426A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A76FBE0E1971B4C000D4426A /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		A76FBE231971B4C000D4426A /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A76FBE241971B4C000D4426A /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A76FBE281971B4C000D4426A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		A76FBE291971B4C000D4426A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A76FBE2B1971B4C000D4426A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "RoommateRentCalculator/RoommateRentCalculator-Prefix.pch";
+				INFOPLIST_FILE = "RoommateRentCalculator/RoommateRentCalculator-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		A76FBE2C1971B4C000D4426A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "RoommateRentCalculator/RoommateRentCalculator-Prefix.pch";
+				INFOPLIST_FILE = "RoommateRentCalculator/RoommateRentCalculator-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		A76FBE2E1971B4C000D4426A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/RoommateRentCalculator.app/RoommateRentCalculator";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "RoommateRentCalculator/RoommateRentCalculator-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "RoommateRentCalculatorTests/RoommateRentCalculatorTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		A76FBE2F1971B4C000D4426A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/RoommateRentCalculator.app/RoommateRentCalculator";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "RoommateRentCalculator/RoommateRentCalculator-Prefix.pch";
+				INFOPLIST_FILE = "RoommateRentCalculatorTests/RoommateRentCalculatorTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A76FBDF31971B4C000D4426A /* Build configuration list for PBXProject "RoommateRentCalculator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A76FBE281971B4C000D4426A /* Debug */,
+				A76FBE291971B4C000D4426A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A76FBE2A1971B4C000D4426A /* Build configuration list for PBXNativeTarget "RoommateRentCalculator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A76FBE2B1971B4C000D4426A /* Debug */,
+				A76FBE2C1971B4C000D4426A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		A76FBE2D1971B4C000D4426A /* Build configuration list for PBXNativeTarget "RoommateRentCalculatorTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A76FBE2E1971B4C000D4426A /* Debug */,
+				A76FBE2F1971B4C000D4426A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A76FBDF01971B4C000D4426A /* Project object */;
+}
