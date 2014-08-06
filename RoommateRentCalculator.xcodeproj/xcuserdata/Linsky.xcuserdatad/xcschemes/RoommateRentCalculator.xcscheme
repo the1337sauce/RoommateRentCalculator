@@ -38,6 +38,16 @@
                ReferencedContainer = "container:RoommateRentCalculator.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "A7E73F341971CF7C007BAEF1"
+               BuildableName = "RRCTests.xctest"
+               BlueprintName = "RRCTests"
+               ReferencedContainer = "container:RoommateRentCalculator.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
