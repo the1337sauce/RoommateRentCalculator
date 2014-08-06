@@ -15,7 +15,9 @@
 @interface BedroomDetailsVC : UIViewController <UITextFieldDelegate>
 
 @property (nonatomic) NSUInteger numberOfRoommates;
-
 @property (nonatomic) BedroomDetailsScrollView *bedroomDetailsScrollView;
+
+
+- (IBAction)finishButton:(id)sender;
 
 @end

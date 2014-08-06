@@ -27,7 +27,7 @@
     [self addSubview:[self roommatesNameLabel]];
     [self addSubview:[self roommatesNameTextField]];
     [self addSubview:[self theirRoomSizeLabel]];
-    [self addSubview:[self roommatesRoomSizeTextField]];
+    [self addSubview:[self roommatesRoomSqFtTextField]];
     [self addSubview:[self sqFtLabel]];
 }
 
@@ -42,12 +42,12 @@
 }
 
 -(UITextField*) roommatesNameTextField{
-    UITextField *roommatesTextFieldLabel = [[UITextField alloc] initWithFrame:CGRectMake(40, 45, 240, 30)];
-    [roommatesTextFieldLabel setBackgroundColor:[UIColor whiteColor]];
-    [roommatesTextFieldLabel setBorderStyle:UITextBorderStyleNone];
-    roommatesTextFieldLabel.delegate = self.textFieldDelegate;
-    self.roommatesNameTextField = roommatesTextFieldLabel;
-    return roommatesTextFieldLabel;
+    UITextField *roommatesNameTextField = [[UITextField alloc] initWithFrame:CGRectMake(40, 45, 240, 30)];
+    [roommatesNameTextField setBackgroundColor:[UIColor whiteColor]];
+    [roommatesNameTextField setBorderStyle:UITextBorderStyleNone];
+    roommatesNameTextField.delegate = self.textFieldDelegate;
+    self.roommatesNameTextField = roommatesNameTextField;
+    return roommatesNameTextField;
 }
 
 -(UILabel*) theirRoomSizeLabel{
@@ -60,13 +60,13 @@
     return theirRoomSizeLabel;
 }
 
--(UITextField*) roommatesRoomSizeTextField{
-    UITextField *roommatesRoomSizeTextField = [[UITextField alloc] initWithFrame:CGRectMake(40, 105, 194, 30)];
-    [roommatesRoomSizeTextField setBackgroundColor:[UIColor whiteColor]];
-    [roommatesRoomSizeTextField setBorderStyle:UITextBorderStyleNone];
-    roommatesRoomSizeTextField.delegate = self.textFieldDelegate;
-    self.roommatesRoomSqFtTextField = roommatesRoomSizeTextField;
-    return roommatesRoomSizeTextField;
+-(UITextField*) roommatesRoomSqFtTextField{
+    UITextField *roommatesRoomSqFtTextField = [[UITextField alloc] initWithFrame:CGRectMake(40, 105, 194, 30)];
+    [roommatesRoomSqFtTextField setBackgroundColor:[UIColor whiteColor]];
+    [roommatesRoomSqFtTextField setBorderStyle:UITextBorderStyleNone];
+    roommatesRoomSqFtTextField.delegate = self.textFieldDelegate;
+    self.roommatesRoomSqFtTextField = roommatesRoomSqFtTextField;
+    return roommatesRoomSqFtTextField;
 }
 
 -(UILabel*) sqFtLabel{

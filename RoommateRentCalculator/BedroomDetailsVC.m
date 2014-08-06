@@ -33,5 +33,14 @@
     return YES;
 }
 
+- (IBAction)finishButton:(id)sender {
+    [self collectInput];
+}
 
+-(void)collectInput{
+    for(RoommateDetailsView *roommateDetailsView in self.bedroomDetailsScrollView.roommateDetailsViews){
+        NSLog(@"nameText is: %@", roommateDetailsView.roommatesNameTextField.text);
+        NSLog(@"roomSize is: %@", roommateDetailsView.roommatesRoomSqFtTextField.text);
+    }
+}
 @end
