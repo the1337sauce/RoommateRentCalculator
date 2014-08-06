@@ -16,7 +16,6 @@
 
 @property (nonatomic) NSUInteger numberOfRoommates;
 
-@property (strong, nonatomic) NSArray *roommateDetailsViews;
 @property (nonatomic) BedroomDetailsScrollView *bedroomDetailsScrollView;
 
 @end

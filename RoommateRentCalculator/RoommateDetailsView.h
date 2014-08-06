@@ -15,10 +15,12 @@
 
 @interface RoommateDetailsView : UIView
 
+@property (strong, nonatomic) id<UITextFieldDelegate> textFieldDelegate;
+
 @property (strong, nonatomic) UITextField *roommatesNameTextField;
 @property (strong, nonatomic) UITextField *roommatesRoomSqFtTextField;
 
 //-(instancetype) init;
--(instancetype) initWithDefaultFrameAndYMultiplier:(NSUInteger)multiplier;
+-(instancetype) initWithDefaultFrameAndYMultiplier:(NSUInteger)multiplier andTextFieldDelegate:(id<UITextFieldDelegate>) textFieldDelegate;
 
 @end

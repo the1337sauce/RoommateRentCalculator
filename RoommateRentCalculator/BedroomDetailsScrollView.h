@@ -16,8 +16,9 @@
 @interface BedroomDetailsScrollView : UIScrollView
 
 @property (nonatomic) NSUInteger numberOfRoommates;
+@property (strong, nonatomic) id<UITextFieldDelegate> textFieldDelegate;
 @property (strong, nonatomic) NSArray *roommateDetailsViews;
 
--(instancetype) initWithNumberOfRoommates:(NSUInteger) numberOfRoommates;
+-(instancetype) initWithNumberOfRoommates:(NSUInteger) numberOfRoommates andTextFieldDelegate:(id<UITextFieldDelegate>) textFieldDelegate;
 
 @end

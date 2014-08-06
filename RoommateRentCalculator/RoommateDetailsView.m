@@ -12,10 +12,11 @@
 
 
 
--(instancetype) initWithDefaultFrameAndYMultiplier:(NSUInteger)multiplier{
+-(instancetype) initWithDefaultFrameAndYMultiplier:(NSUInteger)multiplier andTextFieldDelegate:(id<UITextFieldDelegate>)textFieldDelegate{
     self = [super init];
     if(self){
         self.frame = [self offsetDefaultFrameByMultiplier:multiplier];
+        self.textFieldDelegate = textFieldDelegate;
         [self buildAndAddSubViews];
         [self setBackgroundColor:[UIColor backgroundBlueColor]];
     }
@@ -44,6 +45,7 @@
     UITextField *roommatesTextFieldLabel = [[UITextField alloc] initWithFrame:CGRectMake(40, 45, 240, 30)];
     [roommatesTextFieldLabel setBackgroundColor:[UIColor whiteColor]];
     [roommatesTextFieldLabel setBorderStyle:UITextBorderStyleNone];
+    roommatesTextFieldLabel.delegate = self.textFieldDelegate;
     self.roommatesNameTextField = roommatesTextFieldLabel;
     return roommatesTextFieldLabel;
 }
@@ -62,6 +64,7 @@
     UITextField *roommatesRoomSizeTextField = [[UITextField alloc] initWithFrame:CGRectMake(40, 105, 194, 30)];
     [roommatesRoomSizeTextField setBackgroundColor:[UIColor whiteColor]];
     [roommatesRoomSizeTextField setBorderStyle:UITextBorderStyleNone];
+    roommatesRoomSizeTextField.delegate = self.textFieldDelegate;
     self.roommatesRoomSqFtTextField = roommatesRoomSizeTextField;
     return roommatesRoomSizeTextField;
 }
