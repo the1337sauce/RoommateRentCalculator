@@ -15,8 +15,8 @@
 
 @interface RoommateDetailsView : UIView
 
-@property (weak, nonatomic) IBOutlet UITextField *roommatesNameTextField;
-@property (weak, nonatomic) IBOutlet UITextField *roommatesRoomSqFtTextField;
+@property (strong, nonatomic) UITextField *roommatesNameTextField;
+@property (strong, nonatomic) UITextField *roommatesRoomSqFtTextField;
 
 //-(instancetype) init;
 -(instancetype) initWithDefaultFrameAndYMultiplier:(NSUInteger)multiplier;

@@ -44,6 +44,7 @@
     UITextField *roommatesTextFieldLabel = [[UITextField alloc] initWithFrame:CGRectMake(40, 45, 240, 30)];
     [roommatesTextFieldLabel setBackgroundColor:[UIColor whiteColor]];
     [roommatesTextFieldLabel setBorderStyle:UITextBorderStyleNone];
+    self.roommatesNameTextField = roommatesTextFieldLabel;
     return roommatesTextFieldLabel;
 }
 
@@ -61,6 +62,7 @@
     UITextField *roommatesRoomSizeTextField = [[UITextField alloc] initWithFrame:CGRectMake(40, 105, 194, 30)];
     [roommatesRoomSizeTextField setBackgroundColor:[UIColor whiteColor]];
     [roommatesRoomSizeTextField setBorderStyle:UITextBorderStyleNone];
+    self.roommatesRoomSqFtTextField = roommatesRoomSizeTextField;
     return roommatesRoomSizeTextField;
 }
 

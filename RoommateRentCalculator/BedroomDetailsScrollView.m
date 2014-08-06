@@ -26,8 +26,8 @@
     NSMutableArray *tempRoommateDetailsViews = [[NSMutableArray alloc] init];
     while(roommateViewCounter < self.numberOfRoommates){
         RoommateDetailsView *roommateDetailsView = [self configureRoommateDetailsViewForYMultiple:roommateViewCounter];
-        [tempRoommateDetailsViews addObject:roommateDetailsView];
         [self addSubview:roommateDetailsView];
+        [tempRoommateDetailsViews addObject:roommateDetailsView];
         roommateViewCounter++;
     }
     self.roommateDetailsViews = tempRoommateDetailsViews;
@@ -35,8 +35,6 @@
 
 -(RoommateDetailsView*) configureRoommateDetailsViewForYMultiple:(NSUInteger) yMultiple{
     RoommateDetailsView *roommateDetailsView = [[RoommateDetailsView alloc] initWithDefaultFrameAndYMultiplier:yMultiple];
-    roommateDetailsView.roommatesNameTextField.delegate = self;
-    roommateDetailsView.roommatesRoomSqFtTextField.delegate = self;
     return roommateDetailsView;
 }
 
@@ -48,18 +46,6 @@
 -(CGFloat) currentScreenHeight{
     CGRect screenRect = [[UIScreen mainScreen] bounds];
     return screenRect.size.height;
-}
-
-#pragma mark - UITextFieldDelegate methods
-
-- (BOOL)textFieldShouldReturn:(UITextField *)textField{
-    [textField resignFirstResponder];
-    return YES;
-}
-
-- (BOOL)textFieldShouldEndEditing:(UITextField *)textField{
-    [textField resignFirstResponder];
-    return YES;
 }
 
 @end

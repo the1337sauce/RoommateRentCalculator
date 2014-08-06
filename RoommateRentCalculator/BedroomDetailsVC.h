@@ -10,11 +10,13 @@
 
 #import "RoommateDetailsView.h"
 #import "BedroomDetailsScrollView.h"
+#import "RoommateDetailsView.h"
 
-@interface BedroomDetailsVC : UIViewController
+@interface BedroomDetailsVC : UIViewController <UITextFieldDelegate>
 
 @property (nonatomic) NSUInteger numberOfRoommates;
 
+@property (strong, nonatomic) NSArray *roommateDetailsViews;
 @property (nonatomic) BedroomDetailsScrollView *bedroomDetailsScrollView;
 
 @end

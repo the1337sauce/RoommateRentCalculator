@@ -13,10 +13,10 @@
 #import "Constants.h"
 
 
-@interface BedroomDetailsScrollView : UIScrollView <UITextFieldDelegate>
+@interface BedroomDetailsScrollView : UIScrollView
 
 @property (nonatomic) NSUInteger numberOfRoommates;
-@property (nonatomic) NSArray *roommateDetailsViews;
+@property (strong, nonatomic) NSArray *roommateDetailsViews;
 
 -(instancetype) initWithNumberOfRoommates:(NSUInteger) numberOfRoommates;
 
