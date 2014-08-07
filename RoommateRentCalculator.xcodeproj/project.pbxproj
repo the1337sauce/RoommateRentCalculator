@@ -30,6 +30,10 @@
 		A7E73F401971CF7D007BAEF1 /* BedroomLabelCounterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A7E73F3F1971CF7D007BAEF1 /* BedroomLabelCounterTests.m */; };
 		A7E73F491971D539007BAEF1 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = A7E73F481971D539007BAEF1 /* Constants.m */; };
 		A7E73F4D1971DFA0007BAEF1 /* RoommateDetailsView.m in Sources */ = {isa = PBXBuildFile; fileRef = A7E73F4C1971DFA0007BAEF1 /* RoommateDetailsView.m */; };
+		F904B0E919931639007422FA /* Apartment.m in Sources */ = {isa = PBXBuildFile; fileRef = F904B0E819931639007422FA /* Apartment.m */; };
+		F9B348E9199308CB00981125 /* ApartmentRentCalculator.m in Sources */ = {isa = PBXBuildFile; fileRef = F9B348E8199308CB00981125 /* ApartmentRentCalculator.m */; };
+		F9B348EB199308FB00981125 /* ApartmentRentCalculatorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F9B348EA199308FB00981125 /* ApartmentRentCalculatorTests.m */; };
+		F9B348EE19930A4B00981125 /* Roommate.m in Sources */ = {isa = PBXBuildFile; fileRef = F9B348ED19930A4B00981125 /* Roommate.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +87,13 @@
 		A7E73F4C1971DFA0007BAEF1 /* RoommateDetailsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoommateDetailsView.m; sourceTree = "<group>"; };
 		C13D2200CA884503AD02BD26 /* Pods-RRCTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RRCTests.xcconfig"; path = "Pods/Pods-RRCTests.xcconfig"; sourceTree = "<group>"; };
 		C44F85614E724E0DBF494FF2 /* libPods-RoommateRentCalculatorTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RoommateRentCalculatorTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F904B0E719931639007422FA /* Apartment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Apartment.h; sourceTree = "<group>"; };
+		F904B0E819931639007422FA /* Apartment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Apartment.m; sourceTree = "<group>"; };
+		F9B348E7199308CB00981125 /* ApartmentRentCalculator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ApartmentRentCalculator.h; sourceTree = "<group>"; };
+		F9B348E8199308CB00981125 /* ApartmentRentCalculator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ApartmentRentCalculator.m; sourceTree = "<group>"; };
+		F9B348EA199308FB00981125 /* ApartmentRentCalculatorTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ApartmentRentCalculatorTests.m; sourceTree = "<group>"; };
+		F9B348EC19930A4B00981125 /* Roommate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Roommate.h; sourceTree = "<group>"; };
+		F9B348ED19930A4B00981125 /* Roommate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Roommate.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -200,6 +211,12 @@
 			children = (
 				A79476AB1971C4D8006E7814 /* BedroomLabelCounter.h */,
 				A79476AC1971C4D8006E7814 /* BedroomLabelCounter.m */,
+				F9B348E7199308CB00981125 /* ApartmentRentCalculator.h */,
+				F9B348E8199308CB00981125 /* ApartmentRentCalculator.m */,
+				F9B348EC19930A4B00981125 /* Roommate.h */,
+				F9B348ED19930A4B00981125 /* Roommate.m */,
+				F904B0E719931639007422FA /* Apartment.h */,
+				F904B0E819931639007422FA /* Apartment.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -208,6 +225,7 @@
 			isa = PBXGroup;
 			children = (
 				A7E73F3F1971CF7D007BAEF1 /* BedroomLabelCounterTests.m */,
+				F9B348EA199308FB00981125 /* ApartmentRentCalculatorTests.m */,
 				A7E73F3A1971CF7D007BAEF1 /* Supporting Files */,
 			);
 			path = RRCTests;
@@ -368,9 +386,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F904B0E919931639007422FA /* Apartment.m in Sources */,
 				A7AB59A31979DD9B0058E7D0 /* RoommateDetailsCell.m in Sources */,
 				A7E73F491971D539007BAEF1 /* Constants.m in Sources */,
+				F9B348E9199308CB00981125 /* ApartmentRentCalculator.m in Sources */,
 				A7AB59A01975F7370058E7D0 /* BedroomDetailsScrollView.m in Sources */,
+				F9B348EE19930A4B00981125 /* Roommate.m in Sources */,
 				A79476AD1971C4D8006E7814 /* BedroomLabelCounter.m in Sources */,
 				A76FBE0C1971B4C000D4426A /* AppDelegate.m in Sources */,
 				A76FBE081971B4C000D4426A /* main.m in Sources */,
@@ -386,6 +407,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F9B348EB199308FB00981125 /* ApartmentRentCalculatorTests.m in Sources */,
 				A7E73F401971CF7D007BAEF1 /* BedroomLabelCounterTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

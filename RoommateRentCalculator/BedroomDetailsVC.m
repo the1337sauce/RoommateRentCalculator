@@ -25,22 +25,20 @@
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField{
     [textField resignFirstResponder];
-    return YES;
-}
-
-- (BOOL)textFieldShouldEndEditing:(UITextField *)textField{
-    [textField resignFirstResponder];
+    NSLog(@"Textfield Text: %@", textField.text);
     return YES;
 }
 
 - (IBAction)finishButton:(id)sender {
-    [self collectInput];
+    ApartmentRentCalculator* rentCalculator = [self collectInputIntpRentCalculator];
 }
 
--(void)collectInput{
+-(ApartmentRentCalculator*)collectInputIntpRentCalculator{
     for(RoommateDetailsView *roommateDetailsView in self.bedroomDetailsScrollView.roommateDetailsViews){
-        NSLog(@"nameText is: %@", roommateDetailsView.roommatesNameTextField.text);
-        NSLog(@"roomSize is: %@", roommateDetailsView.roommatesRoomSqFtTextField.text);
+        NSUInteger bedroomSizeInSqFt = [[NSNumber numberWithInteger:[roommateDetailsView.roommatesRoomSqFtTextField.text integerValue]] unsignedIntegerValue];
+        Roommate* roommate = [[Roommate alloc] initWithName:roommateDetailsView.roommatesNameTextField.text andBedroomSizeInSqFt:bedroomSizeInSqFt];
+        
     }
+    return [[ApartmentRentCalculator alloc] init];
 }
 @end

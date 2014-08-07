@@ -2,7 +2,7 @@
 //  BedroomLabelCounterTests.m
 //  RRCTests
 //
-//  Created by Alexander Linsky on 7/12/14.
+//  Created by Nathaniel Linsky on 7/12/14.
 //  Copyright (c) 2014 Nates Lab. All rights reserved.
 //
 
