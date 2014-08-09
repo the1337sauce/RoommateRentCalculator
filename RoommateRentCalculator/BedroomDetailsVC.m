@@ -20,18 +20,15 @@
     [self.view addSubview:self.bedroomDetailsScrollView];
 }
 
-
 #pragma mark - UITextFieldDelegate methods
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField{
     [textField resignFirstResponder];
-    NSLog(@"Textfield Text: %@", textField.text);
     return YES;
 }
 
 -(void)textFieldDidBeginEditing:(UITextField *)textField{
-    self.bedroomDetailsScrollView.leftXOutButton.enabled = YES;
-    self.bedroomDetailsScrollView.leftXOutButton.hidden = NO;
+    [self.bedroomDetailsScrollView enableAndShowLeftXButton];
 }
 
 - (IBAction)finishButton:(id)sender {

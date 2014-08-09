@@ -74,7 +74,7 @@
 -(void) presentButtonWithAnimations:(UIButton*) button{
     [UIView animateWithDuration:0.4
                           delay:0.2
-                        options:UIViewAnimationCurveEaseOut
+                        options:UIViewAnimationOptionCurveEaseOut
                      animations:^{
                          button.alpha = 1.0;
                      }

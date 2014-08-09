@@ -24,4 +24,7 @@
 
 -(instancetype) initWithNumberOfRoommates:(NSUInteger) numberOfRoommates andTextFieldDelegate:(id<UITextFieldDelegate>) textFieldDelegate;
 
+-(void)enableAndShowLeftXButton;
+-(void)resignAllTextFieldsFirstResponder;
+
 @end
