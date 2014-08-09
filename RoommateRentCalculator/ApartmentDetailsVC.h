@@ -1,5 +1,5 @@
 //
-//  InitialVC.h
+//  ApartmentDetailsVC.h
 //  RoommateRentCalculator
 //
 //  Created by Alexander Linsky on 7/12/14.
@@ -10,7 +10,7 @@
 
 #import "BedroomLabelCounter.h"
 
-@interface InitialVC : UIViewController <UITextFieldDelegate>
+@interface ApartmentDetailsVC : UIViewController <UITextFieldDelegate>
 
 @property (nonatomic) BedroomLabelCounter* bedroomLabelCounter;
 
@@ -19,6 +19,9 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *bedroomCountLabel;
 @property (weak, nonatomic) IBOutlet UITextField *squareFeetTextField;
+@property (weak, nonatomic) IBOutlet UITextField *rentTextField;
+
 @property (weak, nonatomic) IBOutlet UIButton *nextButton;
+@property (weak, nonatomic) IBOutlet UIButton *dismissButton;
 
 @end

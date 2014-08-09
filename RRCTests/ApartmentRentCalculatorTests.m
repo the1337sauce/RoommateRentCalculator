@@ -10,7 +10,7 @@
 #define EXP_SHORTHAND
 #import "Expecta.h"
 
-#import "Apartment.h"
+#import "ApartmentRentCalculator.h"
 #import "Roommate.h"
 
 SpecBegin(ApartmentRentCalculatorTests)

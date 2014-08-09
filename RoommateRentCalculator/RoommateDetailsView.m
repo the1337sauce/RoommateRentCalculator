@@ -64,6 +64,7 @@
     self.roommatesRoomSqFtTextField = [[UITextField alloc] initWithFrame:CGRectMake(40, 105, 194, 30)];
     [self.roommatesRoomSqFtTextField setBackgroundColor:[UIColor whiteColor]];
     [self.roommatesRoomSqFtTextField setBorderStyle:UITextBorderStyleNone];
+    [self.roommatesRoomSqFtTextField setKeyboardType:UIKeyboardTypeDecimalPad];
     self.roommatesRoomSqFtTextField.delegate = self.textFieldDelegate;
 }
 
@@ -84,10 +85,6 @@
 -(CGRect) offsetDefaultFrameByMultiplier:(NSUInteger) multiplier{
     CGFloat newY = RoommateDetailsViewY+RoommateDetailsViewHeight*multiplier;
     return CGRectMake(RoommateDetailsViewX, newY, RoommateDetailsViewWidth, RoommateDetailsViewHeight);
-}
-
--(void)drawRect:(CGRect)rect{
-    
 }
 
 @end

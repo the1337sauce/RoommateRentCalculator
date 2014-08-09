@@ -19,6 +19,7 @@
 
 @property (nonatomic) NSUInteger numberOfRoommates;
 @property (nonatomic) NSUInteger totalApartmentSqFootage;
+@property (nonatomic) NSUInteger totalApartmentRent;
 @property (nonatomic) BedroomDetailsScrollView *bedroomDetailsScrollView;
 
 

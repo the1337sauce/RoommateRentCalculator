@@ -29,6 +29,11 @@
     return YES;
 }
 
+-(void)textFieldDidBeginEditing:(UITextField *)textField{
+    self.bedroomDetailsScrollView.leftXOutButton.enabled = YES;
+    self.bedroomDetailsScrollView.leftXOutButton.hidden = NO;
+}
+
 - (IBAction)finishButton:(id)sender {
     ApartmentRentCalculator* rentCalculator = [self collectInputIntpRentCalculator];
 }

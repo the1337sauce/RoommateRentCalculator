@@ -18,6 +18,7 @@
         self.scrollEnabled = YES;
         self.contentSize = CGSizeMake([self currentScreenWidth], numberOfRoommates * RoommateDetailsViewHeight+100);
         [self configureRoommateDetailsViews];
+        [self configureLeftXOutButton];
     }
     return self;
 }
@@ -37,6 +38,18 @@
 -(RoommateDetailsView*) configureRoommateDetailsViewForYMultiple:(NSUInteger) yMultiple{
     RoommateDetailsView *roommateDetailsView = [[RoommateDetailsView alloc] initWithDefaultFrameAndYMultiplier:yMultiple andTextFieldDelegate:self.textFieldDelegate];
     return roommateDetailsView;
+}
+
+-(void)configureLeftXOutButton{
+    CGRect leftXOutButtonFrame = CGRectMake(0, 313, 40, 39);
+    self.leftXOutButton = [[UIButton alloc] initWithFrame:leftXOutButtonFrame];
+    self.leftXOutButton.backgroundColor = [UIColor colorWithRed:255.0/255.0 green:0/255.0 blue:0/255.0 alpha:1];
+    [self.leftXOutButton setTitle:@"X" forState:UIControlStateNormal];
+    [self.leftXOutButton.titleLabel setFont:[UIFont whiteAvenir]];
+    [self.leftXOutButton.titleLabel setTextColor:[UIColor whiteColor]];
+    self.leftXOutButton.hidden = YES;
+    self.leftXOutButton.enabled = NO;
+    [self addSubview:self.leftXOutButton];
 }
 
 -(CGFloat) currentScreenWidth{

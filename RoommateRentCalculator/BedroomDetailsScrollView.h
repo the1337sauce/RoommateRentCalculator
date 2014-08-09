@@ -19,6 +19,9 @@
 @property (strong, nonatomic) id<UITextFieldDelegate> textFieldDelegate;
 @property (strong, nonatomic) NSArray *roommateDetailsViews;
 
+@property (strong, nonatomic) UIButton* leftXOutButton;
+@property (strong, nonatomic) UIButton* rightXOutButton;
+
 -(instancetype) initWithNumberOfRoommates:(NSUInteger) numberOfRoommates andTextFieldDelegate:(id<UITextFieldDelegate>) textFieldDelegate;
 
 @end

@@ -16,7 +16,7 @@
 		A76FBE0C1971B4C000D4426A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A76FBE0B1971B4C000D4426A /* AppDelegate.m */; };
 		A76FBE0F1971B4C000D4426A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A76FBE0D1971B4C000D4426A /* Main.storyboard */; };
 		A76FBE141971B4C000D4426A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A76FBE131971B4C000D4426A /* Images.xcassets */; };
-		A76FBE321971B82600D4426A /* InitialVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A76FBE311971B82600D4426A /* InitialVC.m */; };
+		A76FBE321971B82600D4426A /* ApartmentDetailsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A76FBE311971B82600D4426A /* ApartmentDetailsVC.m */; };
 		A773D6EA1971E2F100DC8C61 /* BedroomDetailsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A773D6E91971E2F100DC8C61 /* BedroomDetailsVC.m */; };
 		A77F2DC71971F81C00866C02 /* UIColor+RRCColors.m in Sources */ = {isa = PBXBuildFile; fileRef = A77F2DC61971F81C00866C02 /* UIColor+RRCColors.m */; };
 		A77F2DCA1971F86B00866C02 /* UIFont+RRCFonts.m in Sources */ = {isa = PBXBuildFile; fileRef = A77F2DC91971F86B00866C02 /* UIFont+RRCFonts.m */; };
@@ -30,7 +30,6 @@
 		A7E73F401971CF7D007BAEF1 /* BedroomLabelCounterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A7E73F3F1971CF7D007BAEF1 /* BedroomLabelCounterTests.m */; };
 		A7E73F491971D539007BAEF1 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = A7E73F481971D539007BAEF1 /* Constants.m */; };
 		A7E73F4D1971DFA0007BAEF1 /* RoommateDetailsView.m in Sources */ = {isa = PBXBuildFile; fileRef = A7E73F4C1971DFA0007BAEF1 /* RoommateDetailsView.m */; };
-		F904B0E919931639007422FA /* Apartment.m in Sources */ = {isa = PBXBuildFile; fileRef = F904B0E819931639007422FA /* Apartment.m */; };
 		F9B348E9199308CB00981125 /* ApartmentRentCalculator.m in Sources */ = {isa = PBXBuildFile; fileRef = F9B348E8199308CB00981125 /* ApartmentRentCalculator.m */; };
 		F9B348EB199308FB00981125 /* ApartmentRentCalculatorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F9B348EA199308FB00981125 /* ApartmentRentCalculatorTests.m */; };
 		F9B348EE19930A4B00981125 /* Roommate.m in Sources */ = {isa = PBXBuildFile; fileRef = F9B348ED19930A4B00981125 /* Roommate.m */; };
@@ -62,8 +61,8 @@
 		A76FBE0E1971B4C000D4426A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A76FBE131971B4C000D4426A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		A76FBE1A1971B4C000D4426A /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		A76FBE301971B82600D4426A /* InitialVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InitialVC.h; sourceTree = "<group>"; };
-		A76FBE311971B82600D4426A /* InitialVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InitialVC.m; sourceTree = "<group>"; };
+		A76FBE301971B82600D4426A /* ApartmentDetailsVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ApartmentDetailsVC.h; sourceTree = "<group>"; };
+		A76FBE311971B82600D4426A /* ApartmentDetailsVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ApartmentDetailsVC.m; sourceTree = "<group>"; };
 		A773D6E81971E2F100DC8C61 /* BedroomDetailsVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BedroomDetailsVC.h; sourceTree = "<group>"; };
 		A773D6E91971E2F100DC8C61 /* BedroomDetailsVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BedroomDetailsVC.m; sourceTree = "<group>"; };
 		A77F2DC51971F81C00866C02 /* UIColor+RRCColors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+RRCColors.h"; sourceTree = "<group>"; };
@@ -87,8 +86,6 @@
 		A7E73F4C1971DFA0007BAEF1 /* RoommateDetailsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoommateDetailsView.m; sourceTree = "<group>"; };
 		C13D2200CA884503AD02BD26 /* Pods-RRCTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RRCTests.xcconfig"; path = "Pods/Pods-RRCTests.xcconfig"; sourceTree = "<group>"; };
 		C44F85614E724E0DBF494FF2 /* libPods-RoommateRentCalculatorTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RoommateRentCalculatorTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		F904B0E719931639007422FA /* Apartment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Apartment.h; sourceTree = "<group>"; };
-		F904B0E819931639007422FA /* Apartment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Apartment.m; sourceTree = "<group>"; };
 		F9B348E7199308CB00981125 /* ApartmentRentCalculator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ApartmentRentCalculator.h; sourceTree = "<group>"; };
 		F9B348E8199308CB00981125 /* ApartmentRentCalculator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ApartmentRentCalculator.m; sourceTree = "<group>"; };
 		F9B348EA199308FB00981125 /* ApartmentRentCalculatorTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ApartmentRentCalculatorTests.m; sourceTree = "<group>"; };
@@ -189,8 +186,8 @@
 			children = (
 				A773D6E81971E2F100DC8C61 /* BedroomDetailsVC.h */,
 				A773D6E91971E2F100DC8C61 /* BedroomDetailsVC.m */,
-				A76FBE301971B82600D4426A /* InitialVC.h */,
-				A76FBE311971B82600D4426A /* InitialVC.m */,
+				A76FBE301971B82600D4426A /* ApartmentDetailsVC.h */,
+				A76FBE311971B82600D4426A /* ApartmentDetailsVC.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -215,8 +212,6 @@
 				F9B348E8199308CB00981125 /* ApartmentRentCalculator.m */,
 				F9B348EC19930A4B00981125 /* Roommate.h */,
 				F9B348ED19930A4B00981125 /* Roommate.m */,
-				F904B0E719931639007422FA /* Apartment.h */,
-				F904B0E819931639007422FA /* Apartment.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -386,7 +381,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F904B0E919931639007422FA /* Apartment.m in Sources */,
 				A7AB59A31979DD9B0058E7D0 /* RoommateDetailsCell.m in Sources */,
 				A7E73F491971D539007BAEF1 /* Constants.m in Sources */,
 				F9B348E9199308CB00981125 /* ApartmentRentCalculator.m in Sources */,
@@ -395,7 +389,7 @@
 				A79476AD1971C4D8006E7814 /* BedroomLabelCounter.m in Sources */,
 				A76FBE0C1971B4C000D4426A /* AppDelegate.m in Sources */,
 				A76FBE081971B4C000D4426A /* main.m in Sources */,
-				A76FBE321971B82600D4426A /* InitialVC.m in Sources */,
+				A76FBE321971B82600D4426A /* ApartmentDetailsVC.m in Sources */,
 				A77F2DCA1971F86B00866C02 /* UIFont+RRCFonts.m in Sources */,
 				A773D6EA1971E2F100DC8C61 /* BedroomDetailsVC.m in Sources */,
 				A7E73F4D1971DFA0007BAEF1 /* RoommateDetailsView.m in Sources */,
