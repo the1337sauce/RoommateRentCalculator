@@ -12,7 +12,7 @@
 
 @property (strong, nonatomic) NSString* name;
 @property (nonatomic) NSUInteger bedroomSizeInSqFt;
-@property (nonatomic) NSUInteger rent;
+@property (nonatomic) long rent;
 
 
 -(instancetype) initWithName:(NSString*) name andBedroomSizeInSqFt:(NSUInteger) bedroomSizeInSqFt;

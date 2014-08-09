@@ -15,10 +15,12 @@
 @property (strong, nonatomic) NSArray* roommates;
 @property (nonatomic) NSUInteger totalSqFt;
 @property (nonatomic) NSUInteger totalRent;
-@property (strong, nonatomic) NSNumber* eachRoommatesShareOfCommonSpaceInSqFt;
+@property (nonatomic) CGFloat eachRoommatesShareOfCommonSpaceInSqFt;
 
--(instancetype) initWithRoommates:(NSArray*) roommates andTotalApartmentSqFootage:(NSUInteger) totalSqFootage withTotalRent:(NSUInteger) totalRent;
+-(instancetype) initWithRoommates:(NSArray*) roommates totalApartmentSqFootage:(NSUInteger) totalSqFootage andTotalRent:(NSUInteger) totalRent;
+
+-(NSUInteger) numberOfRoommates;
 -(NSUInteger) commonRoomSqFootage;
--(NSArray*) calculateEachRoommatesRent;
+
 
 @end

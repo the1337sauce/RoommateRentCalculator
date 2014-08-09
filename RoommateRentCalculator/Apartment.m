@@ -16,7 +16,7 @@
     self.roommates = roommates;
     self.rent = totalRent;
     self.totalSqFt = squareFootage;
-    self.rentCalculator = [[ApartmentRentCalculator alloc] initWithRoommates:roommates andTotalApartmentSqFootage:squareFootage withTotalRent:totalRent];
+    self.rentCalculator = [[ApartmentRentCalculator alloc] initWithRoommates:roommates totalApartmentSqFootage:squareFootage andTotalRent:totalRent];
     self.commonRoomSqFt = [self.rentCalculator commonRoomSqFootage];
     return self;
 }

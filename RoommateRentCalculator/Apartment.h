@@ -19,7 +19,6 @@
 @property (nonatomic) NSUInteger commonRoomSqFt;
 
 -(instancetype) initWithRoommates:(NSArray*) roommates totalRent:(NSUInteger) totalRent andSquareFootage:(NSUInteger) squareFootage;
--(NSUInteger) commonRoomSqFootage;
 -(NSUInteger) numberOfRoommates;
 -(void) calculateEachRoommatesRent;
 

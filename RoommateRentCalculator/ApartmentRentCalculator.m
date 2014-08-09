@@ -10,17 +10,26 @@
 
 @implementation ApartmentRentCalculator
 
--(instancetype) initWithRoommates:(NSArray*) roommates andTotalApartmentSqFootage:(NSUInteger) totalSqFootage withTotalRent:(NSUInteger) totalRent{
+-(instancetype) initWithRoommates:(NSArray*) roommates totalApartmentSqFootage:(NSUInteger) totalSqFootage andTotalRent:(NSUInteger) totalRent{
     self = [super init];
     if (!self) return nil;
-    [self configureRoommates:roommates totalSqFootage:totalSqFootage andTotalRent:totalSqFootage];
-    //self.eachRoommatesShareOfCommonSpaceInSqFt = tot
+    [self configureRoommates:roommates totalSqFootage:totalSqFootage andTotalRent:totalRent];
+    [self initialCalculations];
     return self;
+}
+
+-(NSUInteger) numberOfRoommates{
+    return [self.roommates count];
+}
+
+-(void) initialCalculations{
+    [self calculateEachRoommatesShareOfCommonSpaceInSqFt];
+    [self calculateEachRoommatesRent];
 }
 
 -(void)calculateEachRoommatesShareOfCommonSpaceInSqFt{
     NSUInteger commonRoomSqFootage = [self commonRoomSqFootage];
-    //
+    self.eachRoommatesShareOfCommonSpaceInSqFt = [[NSNumber numberWithUnsignedInteger:commonRoomSqFootage] doubleValue] / [[NSNumber numberWithUnsignedInteger:[self numberOfRoommates]] doubleValue];
 }
 
 -(void) configureRoommates:(NSArray*) roommates totalSqFootage:(NSUInteger) totalSqFootage andTotalRent:(NSUInteger) totalRent{
@@ -37,11 +46,15 @@
     return self.totalSqFt - totalBedroomSquareFootage;
 }
 
--(NSArray*) calculateEachRoommatesRent{
+-(void) calculateEachRoommatesRent{
     for(Roommate *roommate in self.roommates){
-        //NSNumber *ownershipPercentage = roommate.bedroomSizeInSqFt + self.commonRoomSqFootage / self.totalSqFt;
+        CGFloat ownershipPerentage = ([self doubleValueFromUnsignedInteger:roommate.bedroomSizeInSqFt] + self.eachRoommatesShareOfCommonSpaceInSqFt) / [self doubleValueFromUnsignedInteger:self.totalSqFt];
+        roommate.rent = lround([self doubleValueFromUnsignedInteger:self.totalRent] * ownershipPerentage);
     }
-    return [NSArray array];
+}
+
+-(double) doubleValueFromUnsignedInteger:(NSUInteger) unsignedInteger{
+    return [[NSNumber numberWithUnsignedInteger:unsignedInteger] doubleValue];
 }
 
 @end
