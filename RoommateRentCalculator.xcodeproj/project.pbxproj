@@ -22,7 +22,6 @@
 		A77F2DCA1971F86B00866C02 /* UIFont+RRCFonts.m in Sources */ = {isa = PBXBuildFile; fileRef = A77F2DC91971F86B00866C02 /* UIFont+RRCFonts.m */; };
 		A79476AD1971C4D8006E7814 /* BedroomLabelCounter.m in Sources */ = {isa = PBXBuildFile; fileRef = A79476AC1971C4D8006E7814 /* BedroomLabelCounter.m */; };
 		A7AB59A01975F7370058E7D0 /* BedroomDetailsScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = A7AB599F1975F7370058E7D0 /* BedroomDetailsScrollView.m */; };
-		A7AB59A31979DD9B0058E7D0 /* RoommateDetailsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A7AB59A21979DD9B0058E7D0 /* RoommateDetailsCell.m */; };
 		A7E73F361971CF7D007BAEF1 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A76FBE1A1971B4C000D4426A /* XCTest.framework */; };
 		A7E73F371971CF7D007BAEF1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A76FBDFB1971B4C000D4426A /* Foundation.framework */; };
 		A7E73F381971CF7D007BAEF1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A76FBDFF1971B4C000D4426A /* UIKit.framework */; };
@@ -33,6 +32,8 @@
 		F9B348E9199308CB00981125 /* ApartmentRentCalculator.m in Sources */ = {isa = PBXBuildFile; fileRef = F9B348E8199308CB00981125 /* ApartmentRentCalculator.m */; };
 		F9B348EB199308FB00981125 /* ApartmentRentCalculatorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F9B348EA199308FB00981125 /* ApartmentRentCalculatorTests.m */; };
 		F9B348EE19930A4B00981125 /* Roommate.m in Sources */ = {isa = PBXBuildFile; fileRef = F9B348ED19930A4B00981125 /* Roommate.m */; };
+		F9C67E4D199C345500220AC5 /* BedroomDetailsView.m in Sources */ = {isa = PBXBuildFile; fileRef = F9C67E4C199C345500220AC5 /* BedroomDetailsView.m */; };
+		F9C67E56199C40EE00220AC5 /* ResultsTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F9C67E55199C40EE00220AC5 /* ResultsTVC.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,8 +74,6 @@
 		A79476AC1971C4D8006E7814 /* BedroomLabelCounter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BedroomLabelCounter.m; sourceTree = "<group>"; };
 		A7AB599E1975F7370058E7D0 /* BedroomDetailsScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BedroomDetailsScrollView.h; sourceTree = "<group>"; };
 		A7AB599F1975F7370058E7D0 /* BedroomDetailsScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BedroomDetailsScrollView.m; sourceTree = "<group>"; };
-		A7AB59A11979DD9B0058E7D0 /* RoommateDetailsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoommateDetailsCell.h; sourceTree = "<group>"; };
-		A7AB59A21979DD9B0058E7D0 /* RoommateDetailsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoommateDetailsCell.m; sourceTree = "<group>"; };
 		A7E73F351971CF7C007BAEF1 /* RRCTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RRCTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7E73F3B1971CF7D007BAEF1 /* RRCTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "RRCTests-Info.plist"; sourceTree = "<group>"; };
 		A7E73F3D1971CF7D007BAEF1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -91,6 +90,10 @@
 		F9B348EA199308FB00981125 /* ApartmentRentCalculatorTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ApartmentRentCalculatorTests.m; sourceTree = "<group>"; };
 		F9B348EC19930A4B00981125 /* Roommate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Roommate.h; sourceTree = "<group>"; };
 		F9B348ED19930A4B00981125 /* Roommate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Roommate.m; sourceTree = "<group>"; };
+		F9C67E4B199C345500220AC5 /* BedroomDetailsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BedroomDetailsView.h; sourceTree = "<group>"; };
+		F9C67E4C199C345500220AC5 /* BedroomDetailsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BedroomDetailsView.m; sourceTree = "<group>"; };
+		F9C67E54199C40EE00220AC5 /* ResultsTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResultsTVC.h; sourceTree = "<group>"; };
+		F9C67E55199C40EE00220AC5 /* ResultsTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResultsTVC.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -184,10 +187,12 @@
 		A773D6EC1971E30300DC8C61 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				A773D6E81971E2F100DC8C61 /* BedroomDetailsVC.h */,
-				A773D6E91971E2F100DC8C61 /* BedroomDetailsVC.m */,
 				A76FBE301971B82600D4426A /* ApartmentDetailsVC.h */,
 				A76FBE311971B82600D4426A /* ApartmentDetailsVC.m */,
+				A773D6E81971E2F100DC8C61 /* BedroomDetailsVC.h */,
+				A773D6E91971E2F100DC8C61 /* BedroomDetailsVC.m */,
+				F9C67E54199C40EE00220AC5 /* ResultsTVC.h */,
+				F9C67E55199C40EE00220AC5 /* ResultsTVC.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -243,8 +248,8 @@
 				A7E73F4C1971DFA0007BAEF1 /* RoommateDetailsView.m */,
 				A7AB599E1975F7370058E7D0 /* BedroomDetailsScrollView.h */,
 				A7AB599F1975F7370058E7D0 /* BedroomDetailsScrollView.m */,
-				A7AB59A11979DD9B0058E7D0 /* RoommateDetailsCell.h */,
-				A7AB59A21979DD9B0058E7D0 /* RoommateDetailsCell.m */,
+				F9C67E4B199C345500220AC5 /* BedroomDetailsView.h */,
+				F9C67E4C199C345500220AC5 /* BedroomDetailsView.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -381,14 +386,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A7AB59A31979DD9B0058E7D0 /* RoommateDetailsCell.m in Sources */,
 				A7E73F491971D539007BAEF1 /* Constants.m in Sources */,
 				F9B348E9199308CB00981125 /* ApartmentRentCalculator.m in Sources */,
 				A7AB59A01975F7370058E7D0 /* BedroomDetailsScrollView.m in Sources */,
+				F9C67E4D199C345500220AC5 /* BedroomDetailsView.m in Sources */,
 				F9B348EE19930A4B00981125 /* Roommate.m in Sources */,
 				A79476AD1971C4D8006E7814 /* BedroomLabelCounter.m in Sources */,
 				A76FBE0C1971B4C000D4426A /* AppDelegate.m in Sources */,
 				A76FBE081971B4C000D4426A /* main.m in Sources */,
+				F9C67E56199C40EE00220AC5 /* ResultsTVC.m in Sources */,
 				A76FBE321971B82600D4426A /* ApartmentDetailsVC.m in Sources */,
 				A77F2DCA1971F86B00866C02 /* UIFont+RRCFonts.m in Sources */,
 				A773D6EA1971E2F100DC8C61 /* BedroomDetailsVC.m in Sources */,

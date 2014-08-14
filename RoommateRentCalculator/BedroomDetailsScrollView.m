@@ -18,7 +18,6 @@
         self.scrollEnabled = YES;
         self.contentSize = CGSizeMake([self currentScreenWidth], numberOfRoommates * RoommateDetailsViewHeight+100);
         [self configureRoommateDetailsViews];
-        [self configureLeftXOutButton];
     }
     return self;
 }
@@ -40,46 +39,11 @@
     return roommateDetailsView;
 }
 
--(void)configureLeftXOutButton{
-    CGRect leftXOutButtonFrame = CGRectMake(0, 313, 40, 39);
-    self.leftXOutButton = [[UIButton alloc] initWithFrame:leftXOutButtonFrame];
-    self.leftXOutButton.backgroundColor = [UIColor colorWithRed:255.0/255.0 green:0/255.0 blue:0/255.0 alpha:1];
-    [self.leftXOutButton setTitle:@"X" forState:UIControlStateNormal];
-    [self.leftXOutButton.titleLabel setFont:[UIFont fontWithName:@"Avenir Heavy" size:17.0]];
-    [self.leftXOutButton.titleLabel setTextColor:[UIColor whiteColor]];
-    [self disableAndHideLeftXButton];
-    [self.leftXOutButton addTarget:self action:@selector(resignAllTextFieldsFirstResponder) forControlEvents:UIControlEventTouchUpInside];
-    [self addSubview:self.leftXOutButton];
-}
-
--(void) disableAndHideLeftXButton{
-    self.leftXOutButton.alpha = 0.0;
-    self.leftXOutButton.enabled = NO;
-}
-
--(void) enableAndShowLeftXButton{
-    self.leftXOutButton.enabled = YES;
-    [self presentButtonWithAnimations:self.leftXOutButton];
-}
-
--(void) presentButtonWithAnimations:(UIButton*) button{
-    [UIView animateWithDuration:0.4
-                          delay:0.2
-                        options:UIViewAnimationOptionCurveEaseOut
-                     animations:^{
-                         button.alpha = 1.0;
-                     }
-                     completion:^(BOOL finished){
-                         NSLog(@"Done!");
-                     }];
-}
-
 -(void)resignAllTextFieldsFirstResponder{
     for(RoommateDetailsView* roommateDetailsView in self.roommateDetailsViews){
         [roommateDetailsView.roommatesNameTextField resignFirstResponder];
         [roommateDetailsView.roommatesRoomSqFtTextField resignFirstResponder];
     }
-    [self disableAndHideLeftXButton];
 }
 
 -(CGFloat) currentScreenWidth{
