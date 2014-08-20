@@ -56,4 +56,15 @@
     return screenRect.size.height;
 }
 
+-(BOOL) isPopulatedWithValidInput{
+    BOOL isPopulated = YES;
+    for(RoommateDetailsView* roommateDetailsView in self.roommateDetailsViews){
+        if (!roommateDetailsView.isPopulated) {
+            isPopulated = NO;
+            break;
+        }
+    }
+    return isPopulated;
+}
+
 @end

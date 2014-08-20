@@ -25,7 +25,6 @@
 
 -(void) setPricePerSqFtLabelTextForPricePerSqFt:(CGFloat) pricePerSqFt{
     self.pricePerSqFtLabel.text = [NSString stringWithFormat:@"%@ %@ %@", @"You're paying $", [NSString stringWithFormat:@"%.2f", pricePerSqFt], @"per sq/ft"];
-    
 }
 
 @end

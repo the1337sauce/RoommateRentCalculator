@@ -39,11 +39,11 @@
 }
 
 - (IBAction)finishButton:(id)sender {
-    ApartmentRentCalculator* apartmentRentCalculator = [self collectInputIntpRentCalculator];
+    ApartmentRentCalculator* apartmentRentCalculator = [self collectInputIntoRentCalculator];
     [self performSegueWithIdentifier:@"Show Results" sender:apartmentRentCalculator];
 }
 
--(ApartmentRentCalculator*)collectInputIntpRentCalculator{
+-(ApartmentRentCalculator*)collectInputIntoRentCalculator{
     NSMutableArray *roommates = [NSMutableArray new];
     for(RoommateDetailsView *roommateDetailsView in self.bedroomDetailsScrollView.roommateDetailsViews){
         NSUInteger bedroomSizeInSqFt = [[NSNumber numberWithInteger:[roommateDetailsView.roommatesRoomSqFtTextField.text integerValue]] unsignedIntegerValue];

@@ -25,4 +25,6 @@
 
 -(void)resignAllTextFieldsFirstResponder;
 
+-(BOOL) isPopulatedWithValidInput;
+
 @end

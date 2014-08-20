@@ -85,5 +85,9 @@
     return CGRectMake(RoommateDetailsViewX, newY, RoommateDetailsViewWidth, RoommateDetailsViewHeight);
 }
 
+-(BOOL) isPopulated{
+    return [self.roommatesNameTextField.text length] > 0 && [self.roommatesRoomSqFtTextField.text length] > 0;
+}
+
 @end
 
