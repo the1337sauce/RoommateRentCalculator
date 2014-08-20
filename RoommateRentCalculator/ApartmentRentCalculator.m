@@ -62,4 +62,12 @@
     return [[NSNumber numberWithUnsignedInteger:unsignedInteger] doubleValue];
 }
 
+-(BOOL) isValidBedroomSquareFootage{
+    NSUInteger totalRoommateBedroomSquareFootage = 0;
+    for(Roommate *roommate in self.roommates){
+        totalRoommateBedroomSquareFootage += roommate.bedroomSizeInSqFt;
+    }
+    return totalRoommateBedroomSquareFootage < self.totalSqFt;
+}
+
 @end

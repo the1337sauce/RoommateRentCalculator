@@ -22,6 +22,6 @@
 -(NSUInteger) numberOfRoommates;
 -(NSUInteger) commonRoomSqFootage;
 -(CGFloat) calculatePricePerSqFt;
-
+-(BOOL) isValidBedroomSquareFootage;
 
 @end

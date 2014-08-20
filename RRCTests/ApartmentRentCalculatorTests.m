@@ -17,6 +17,7 @@ SpecBegin(ApartmentRentCalculatorTests)
 
     __block ApartmentRentCalculator* twoRoommateRentCalculator;
     __block ApartmentRentCalculator* threeRoommateRentCalculator;
+    __block ApartmentRentCalculator* invalidBedroomSqFootageCalculator;
 
     beforeAll(^{
         Roommate* roommate = [[Roommate alloc] initWithName:@"Nate" andBedroomSizeInSqFt:400];
@@ -27,6 +28,10 @@ SpecBegin(ApartmentRentCalculatorTests)
         Roommate* two = [[Roommate alloc] initWithName:@"Mary" andBedroomSizeInSqFt:120];
         Roommate* three = [[Roommate alloc] initWithName:@"Katie" andBedroomSizeInSqFt:135];
         threeRoommateRentCalculator = [[ApartmentRentCalculator alloc] initWithRoommates:[NSArray arrayWithObjects:one, two, three, nil] totalApartmentSqFootage:948 andTotalRent:4450];
+        
+        Roommate* bigRoom = [[Roommate alloc] initWithName:@"BigOleRoom" andBedroomSizeInSqFt:550];
+        Roommate* biggerRoom = [[Roommate alloc] initWithName:@"BiggerRoomDude" andBedroomSizeInSqFt:600];
+        invalidBedroomSqFootageCalculator = [[ApartmentRentCalculator alloc] initWithRoommates:[NSArray arrayWithObjects:bigRoom, biggerRoom, nil] totalApartmentSqFootage:800 andTotalRent:2450];
     });
 
     describe(@"RentCalculator", ^{
@@ -75,8 +80,12 @@ SpecBegin(ApartmentRentCalculatorTests)
             expect(roommate.rent).to.equal(900);
         });
         
-        it(@"can properly calculate price per sq/ft", ^{
-            expect(twoRoommateRentCalculator.calculatePricePerSqFt).to.equal(2.0);
+        it(@"can properly report invalid bedroom size when bedrooms exceed total sq ft", ^{
+            expect(invalidBedroomSqFootageCalculator.isValidBedroomSquareFootage).to.equal(NO);
+        });
+        
+        it(@"can properly report valid bedroom size when bedrooms dont exceed total sq ft", ^{
+            expect(twoRoommateRentCalculator.isValidBedroomSquareFootage).to.equal(YES);
         });
         
     });
