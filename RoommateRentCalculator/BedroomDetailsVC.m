@@ -40,7 +40,28 @@
 
 - (IBAction)finishButton:(id)sender {
     ApartmentRentCalculator* apartmentRentCalculator = [self buildApartmentRentCalculatorWithInput];
-    [self performSegueWithIdentifier:@"Show Results" sender:apartmentRentCalculator];
+    [self performSegueOrReportInvalidInputForCalculator:apartmentRentCalculator];
+}
+
+-(void)performSegueOrReportInvalidInputForCalculator:(ApartmentRentCalculator*) apartmentRentCalculator{
+    if(!self.bedroomDetailsScrollView.isFullyPopulated){
+        [self displayAlertViewWithMessage:@"Please finish filling out the text fields"];
+    }
+    else if(!apartmentRentCalculator.isValidBedroomSquareFootage){
+        [self displayAlertViewWithMessage:@"Bedroom square footage is greater than the total apartment square footage!"];
+    }
+    else{
+        [self performSegueWithIdentifier:@"Show Results" sender:apartmentRentCalculator];
+    }
+}
+
+-(void) displayAlertViewWithMessage:(NSString*) message{
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Invalid Input"
+                                                    message:message
+                                                   delegate:self
+                                          cancelButtonTitle:@"Ok"
+                                          otherButtonTitles:nil];
+    [alert show];
 }
 
 -(ApartmentRentCalculator*)buildApartmentRentCalculatorWithInput{

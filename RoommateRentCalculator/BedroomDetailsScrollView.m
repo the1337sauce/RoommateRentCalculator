@@ -56,10 +56,10 @@
     return screenRect.size.height;
 }
 
--(BOOL) isPopulatedWithValidInput{
+-(BOOL) isFullyPopulated{
     BOOL isPopulated = YES;
     for(RoommateDetailsView* roommateDetailsView in self.roommateDetailsViews){
-        if (!roommateDetailsView.isPopulated) {
+        if (!roommateDetailsView.isFullyPopulated) {
             isPopulated = NO;
             break;
         }

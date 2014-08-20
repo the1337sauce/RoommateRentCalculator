@@ -22,6 +22,6 @@
 
 //-(instancetype) init;
 -(instancetype) initWithDefaultFrameAndYMultiplier:(NSUInteger)multiplier andTextFieldDelegate:(id<UITextFieldDelegate>) textFieldDelegate;
--(BOOL) isPopulated;
+-(BOOL) isFullyPopulated;
 
 @end
