@@ -53,6 +53,11 @@
     }
 }
 
+-(CGFloat) calculatePricePerSqFt{
+    CGFloat fullDecimalPricePerSqFt = [self doubleValueFromUnsignedInteger:self.totalRent] / [self doubleValueFromUnsignedInteger:self.totalSqFt];
+    return [[NSString stringWithFormat:@"%.2f", fullDecimalPricePerSqFt] floatValue];
+}
+
 -(double) doubleValueFromUnsignedInteger:(NSUInteger) unsignedInteger{
     return [[NSNumber numberWithUnsignedInteger:unsignedInteger] doubleValue];
 }

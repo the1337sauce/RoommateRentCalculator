@@ -75,6 +75,10 @@ SpecBegin(ApartmentRentCalculatorTests)
             expect(roommate.rent).to.equal(900);
         });
         
+        it(@"can properly calculate price per sq/ft", ^{
+            expect(twoRoommateRentCalculator.calculatePricePerSqFt).to.equal(2.0);
+        });
+        
     });
 
     describe(@"RentCalculator with three roommates and decimals", ^{

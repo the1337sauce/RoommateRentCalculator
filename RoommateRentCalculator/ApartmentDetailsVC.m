@@ -88,7 +88,7 @@
         BedroomDetailsVC *bedroomDetailsVC = (BedroomDetailsVC*) segue.destinationViewController;
         bedroomDetailsVC.numberOfRoommates = self.bedroomLabelCounter.currentBedroomCount;
         bedroomDetailsVC.totalApartmentSqFootage = [[NSNumber numberWithInteger:[self.squareFeetTextField.text integerValue]] unsignedIntegerValue];
-        bedroomDetailsVC.totalApartmentRent = [[NSNumber numberWithInteger:[self.squareFeetTextField.text integerValue]] unsignedIntegerValue];
+        bedroomDetailsVC.totalApartmentRent = [[NSNumber numberWithInteger:[self.rentTextField.text integerValue]] unsignedIntegerValue];
     }
 }
 

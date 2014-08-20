@@ -187,7 +187,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <view key="tableHeaderView" contentMode="scaleToFill" id="3Jx-nr-Ss7">
+                        <view key="tableHeaderView" contentMode="scaleToFill" id="3Jx-nr-Ss7" customClass="ResultsHeaderView">
                             <rect key="frame" x="0.0" y="64" width="320" height="161"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
@@ -207,9 +207,13 @@
                                 </label>
                             </subviews>
                             <color key="backgroundColor" red="0.0" green="0.0" blue="0.4823529412" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <outlet property="commonSpaceSqFtLabel" destination="Xi6-MA-BtD" id="b56-Xz-8UE"/>
+                                <outlet property="pricePerSqFtLabel" destination="WE7-Ft-loo" id="p1G-bR-TJr"/>
+                            </connections>
                         </view>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="CHg-TU-4eJ" style="IBUITableViewCellStyleDefault" id="C7t-2q-e1y">
+                            <tableViewCell userInteractionEnabled="NO" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Rent Cell" textLabel="CHg-TU-4eJ" style="IBUITableViewCellStyleDefault" id="C7t-2q-e1y" customClass="RoommateResultsCell">
                                 <rect key="frame" x="0.0" y="247" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="C7t-2q-e1y" id="OBN-21-xaO">
@@ -226,6 +230,9 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.4823529412" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <outlet property="textLabel" destination="CHg-TU-4eJ" id="AxI-Dc-7xi"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -235,8 +242,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Results" id="nIW-QU-2bq"/>
                     <connections>
-                        <outlet property="commonSqFtLabel" destination="Xi6-MA-BtD" id="s5T-t1-wYf"/>
-                        <outlet property="pricePerSqFtLabel" destination="WE7-Ft-loo" id="vBo-bK-IsI"/>
+                        <outlet property="headerView" destination="3Jx-nr-Ss7" id="hEW-FH-bXJ"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ugE-OM-qby" userLabel="First Responder" sceneMemberID="firstResponder"/>

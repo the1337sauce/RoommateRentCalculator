@@ -10,8 +10,6 @@
 
 @implementation RoommateDetailsView
 
-
-
 -(instancetype) initWithDefaultFrameAndYMultiplier:(NSUInteger)multiplier andTextFieldDelegate:(id<UITextFieldDelegate>)textFieldDelegate{
     self = [super init];
     if(self){

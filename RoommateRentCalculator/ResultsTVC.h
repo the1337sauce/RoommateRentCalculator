@@ -9,11 +9,12 @@
 #import <UIKit/UIKit.h>
 
 #import "ApartmentRentCalculator.h"
+#import "RoommateResultsCell.h"
+#import "ResultsHeaderView.h"
 
 @interface ResultsTVC : UITableViewController
-@property (weak, nonatomic) IBOutlet UILabel *commonSqFtLabel;
-@property (weak, nonatomic) IBOutlet UILabel *pricePerSqFtLabel;
 
+@property (weak, nonatomic) IBOutlet ResultsHeaderView *headerView;
 @property (strong, nonatomic) ApartmentRentCalculator *apartmentRentCalculator;
 
 @end
