@@ -19,6 +19,7 @@
     self.rentTextField.delegate = self;
     [self disableAndHideNextButton];
     [self configureDismissButton];
+    [self adjustButtonHeightForScreenSize];
 }
 - (IBAction)addBedroomButtonWasPressed:(id)sender {
     [self incrementBedroomCount];
@@ -27,6 +28,12 @@
 - (IBAction)subtractBedroomButtonWasPressed:(id)sender {
     [self decrementBedroomCount];
 }
+
+-(void) configureDismissButton{
+    [self disableAndHideDismissButton];
+    [self.dismissButton addTarget:self action:@selector(dismissButtonPressed) forControlEvents:UIControlEventTouchUpInside];
+}
+
 
 -(void) disableAndHideNextButton{
     self.nextButton.enabled = NO;
@@ -38,9 +45,29 @@
     self.dismissButton.alpha = 0.0;
 }
 
--(void) configureDismissButton{
-    [self disableAndHideDismissButton];
-    [self.dismissButton addTarget:self action:@selector(dismissButtonPressed) forControlEvents:UIControlEventTouchUpInside];
+-(void)adjustButtonHeightForScreenSize{
+    if([self isSmallerScreen]){
+        [self adjustDismissButtonFrameForSmallerScreen];
+        [self adjustNextButtonFrameForSmallerScreen];
+    }
+}
+
+-(void) adjustDismissButtonFrameForSmallerScreen{
+    CGRect currentFrame = self.dismissButton.frame;
+    self.dismissButton.frame = [self offsetKeyboardButtonFrameForSmallerScreen:currentFrame];
+}
+
+-(void) adjustNextButtonFrameForSmallerScreen{
+    CGRect currentFrame = self.nextButton.frame;
+    self.nextButton.frame = [self offsetKeyboardButtonFrameForSmallerScreen:currentFrame];
+}
+
+-(CGRect) offsetKeyboardButtonFrameForSmallerScreen:(CGRect) originalButtonFrame{
+    return CGRectMake(originalButtonFrame.origin.x, originalButtonFrame.origin.y-88, originalButtonFrame.size.width, originalButtonFrame.size.height);
+}
+
+-(BOOL) isSmallerScreen{
+    return [[UIScreen mainScreen] bounds].size.height == 480;
 }
 
 -(void) dismissButtonPressed{
@@ -78,9 +105,7 @@
                      animations:^{
                          button.alpha = 1.0;
                      }
-                     completion:^(BOOL finished){
-                         NSLog(@"Done!");
-                     }];
+                     completion:nil] ;
 }
 
 -(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
