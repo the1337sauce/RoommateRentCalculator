@@ -35,13 +35,17 @@
 }
 
 -(void)shiftViewForKeyboardOpened:(NSNotification*) notification{
-    CGSize keyboardSize = [[[notification userInfo] objectForKey:UIKeyboardFrameBeginUserInfoKey] CGRectValue].size;
+    CGSize keyboardSize = [self getKeyboardSizeFromNotification:notification];
     [self.bedroomDetailsScrollView offsetForKeyboardOpenedWithKeyboardSize:keyboardSize];
 }
 
 -(void)shiftViewForKeyboardClosed:(NSNotification*) notification {
-     CGSize keyboardSize = [[[notification userInfo] objectForKey:UIKeyboardFrameBeginUserInfoKey] CGRectValue].size;
+    CGSize keyboardSize = [self getKeyboardSizeFromNotification:notification];
     [self.bedroomDetailsScrollView offsetForKeyboardClosedWithKeyboardSize:keyboardSize];
+}
+
+-(CGSize) getKeyboardSizeFromNotification:(NSNotification*) notification{
+     return [[[notification userInfo] objectForKey:UIKeyboardFrameBeginUserInfoKey] CGRectValue].size;
 }
 
 #pragma mark - UITextFieldDelegate methods
@@ -107,6 +111,11 @@
         ResultsTVC *resultsTVC = (ResultsTVC*) segue.destinationViewController;
         resultsTVC.apartmentRentCalculator = sender;
     }
+}
+
+-(void)dealloc{
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:UIKeyboardDidShowNotification object:nil];
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:UIKeyboardDidHideNotification object:nil];
 }
 
 @end
