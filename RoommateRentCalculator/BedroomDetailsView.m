@@ -29,7 +29,7 @@
 }
 
 -(void)configureLeftXOutButton{
-    CGRect leftXOutButtonFrame = CGRectMake(0, 313, 40, 39);
+    CGRect leftXOutButtonFrame = CGRectMake(0, [self calculateLeftXOutButtonYOrigin], 40, 39);
     self.leftXOutButton = [[UIButton alloc] initWithFrame:leftXOutButtonFrame];
     self.leftXOutButton.backgroundColor = [UIColor colorWithRed:255.0/255.0 green:0/255.0 blue:0/255.0 alpha:1];
     [self.leftXOutButton setTitle:@"X" forState:UIControlStateNormal];
@@ -39,6 +39,10 @@
     [self addSubview:self.leftXOutButton];
 }
 
+-(CGFloat) calculateLeftXOutButtonYOrigin{
+    CGRect screenRect = [[UIScreen mainScreen] bounds];
+    return screenRect.size.height == 568 ? 313 : 225;
+}
 
 -(void) disableAndHideLeftXButton{
     self.leftXOutButton.alpha = 0.0;
