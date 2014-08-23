@@ -34,6 +34,30 @@
     self.roommateDetailsViews = tempRoommateDetailsViews;
 }
 
+-(void) offsetForKeyboardOpenedWithKeyboardSize:(CGSize) keyboardSize{
+    CGFloat keyboardHeight = keyboardSize.height;
+    [self offsetFrameForKeyboardHeight:keyboardHeight];
+    
+}
+
+-(void) offsetForKeyboardClosedWithKeyboardSize:(CGSize) keyboardSize{
+    CGFloat keyboardHeight = keyboardSize.height;
+    [self offsetFrameForKeyboardHeight:-keyboardHeight];
+}
+
+-(void) offsetFrameForKeyboardHeight:(CGFloat) keyboardHeight{
+    [UIView animateWithDuration:0.1
+                          delay:0.0
+                        options:UIViewAnimationOptionCurveEaseOut
+                     animations:^{
+                        self.frame = CGRectMake(self.frame.origin.x, self.frame.origin.y, self.frame.size.width, self.frame.size.height-keyboardHeight);
+                     }
+                     completion:^(BOOL finished){
+                         NSLog(@"Done!");
+                     }];
+
+}
+
 -(RoommateDetailsView*) configureRoommateDetailsViewForYMultiple:(NSUInteger) yMultiple{
     RoommateDetailsView *roommateDetailsView = [[RoommateDetailsView alloc] initWithDefaultFrameAndYMultiplier:yMultiple andTextFieldDelegate:self.textFieldDelegate];
     return roommateDetailsView;

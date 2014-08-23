@@ -14,11 +14,34 @@
     [super viewDidLoad];
     [self configureBedroomDetailsScrollView];
     [self.view.leftXOutButton addTarget:self action:@selector(leftXOutButtonTapped) forControlEvents:UIControlEventTouchUpInside];
+    [self registerKeyboardObservers];
 }
 
 -(void) configureBedroomDetailsScrollView{
     self.bedroomDetailsScrollView = [[BedroomDetailsScrollView alloc] initWithNumberOfRoommates:self.numberOfRoommates andTextFieldDelegate:self];
     [self.view insertSubview:self.bedroomDetailsScrollView belowSubview:self.view.leftXOutButton];
+}
+
+-(void) registerKeyboardObservers{
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(shiftViewForKeyboardOpened:)
+                                                 name:UIKeyboardDidShowNotification
+                                               object:nil];
+    //For Later Use
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(shiftViewForKeyboardClosed:)
+                                                 name:UIKeyboardWillHideNotification
+                                               object:nil];
+}
+
+-(void)shiftViewForKeyboardOpened:(NSNotification*) notification{
+    CGSize keyboardSize = [[[notification userInfo] objectForKey:UIKeyboardFrameBeginUserInfoKey] CGRectValue].size;
+    [self.bedroomDetailsScrollView offsetForKeyboardOpenedWithKeyboardSize:keyboardSize];
+}
+
+-(void)shiftViewForKeyboardClosed:(NSNotification*) notification {
+     CGSize keyboardSize = [[[notification userInfo] objectForKey:UIKeyboardFrameBeginUserInfoKey] CGRectValue].size;
+    [self.bedroomDetailsScrollView offsetForKeyboardClosedWithKeyboardSize:keyboardSize];
 }
 
 #pragma mark - UITextFieldDelegate methods

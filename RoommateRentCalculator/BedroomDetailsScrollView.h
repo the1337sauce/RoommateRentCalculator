@@ -24,6 +24,8 @@
 -(instancetype) initWithNumberOfRoommates:(NSUInteger) numberOfRoommates andTextFieldDelegate:(id<UITextFieldDelegate>) textFieldDelegate;
 
 -(void)resignAllTextFieldsFirstResponder;
+-(void) offsetForKeyboardOpenedWithKeyboardSize:(CGSize) keyboardSize;
+-(void) offsetForKeyboardClosedWithKeyboardSize:(CGSize) keyboardSize;
 
 -(BOOL) isFullyPopulated;
 
