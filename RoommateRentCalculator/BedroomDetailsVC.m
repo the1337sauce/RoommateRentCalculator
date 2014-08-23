@@ -27,7 +27,6 @@
                                              selector:@selector(shiftViewForKeyboardOpened:)
                                                  name:UIKeyboardDidShowNotification
                                                object:nil];
-    //For Later Use
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(shiftViewForKeyboardClosed:)
                                                  name:UIKeyboardWillHideNotification
