@@ -11,5 +11,6 @@
 @interface UIFont (RRCFonts)
 
 +(UIFont*) whiteAvenir;
++(UIFont*) navBarTitleAvenir;
 
 @end
