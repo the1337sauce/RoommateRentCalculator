@@ -10,7 +10,7 @@
 
 @interface UIFont (RRCFonts)
 
-+(UIFont*) whiteAvenir;
++(UIFont*) textFieldAvenir;
 +(UIFont*) navBarTitleAvenir;
 
 @end

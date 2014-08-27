@@ -10,8 +10,8 @@
 
 @implementation UIFont (RRCFonts)
 
-+(UIFont*) whiteAvenir{
-    return [UIFont fontWithName:@"Avenir" size:15.0];
++(UIFont*) textFieldAvenir{
+    return [UIFont fontWithName:@"Avenir-Medium" size:15.0];
 }
 
 +(UIFont*) navBarTitleAvenir{

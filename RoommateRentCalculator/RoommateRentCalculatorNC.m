@@ -28,15 +28,26 @@
     [super viewDidLoad];
     [self setNavBarColor];
     [self setNavBarTitleColor];
+    [self setNavBarItemColors];
+    [self hideBackBarButtonItemBackText];
+}
+
+-(void) hideBackBarButtonItemBackText{
+    [[UIBarButtonItem appearance] setBackButtonTitlePositionAdjustment:UIOffsetMake(0, -60)
+                                                         forBarMetrics:UIBarMetricsDefault];
+}
+
+-(void)setNavBarItemColors{
+    self.navigationBar.tintColor = [UIColor lightTextColor];
 }
 
 -(void)setNavBarColor{
-    [[UINavigationBar appearance] setBarTintColor:[UIColor colorWithRed:219.0/255.0 green:68.0/255.0 blue:66.0/255.0 alpha:1.0]];
+    [[UINavigationBar appearance] setBarTintColor:[UIColor fadedRedColor]];
 }
 
 -(void)setNavBarTitleColor{
     [[UINavigationBar appearance] setTitleTextAttributes:
-            @{ NSForegroundColorAttributeName : [UIColor colorWithRed:240.0/255.0 green:241.0/255.0 blue:207.0/255.0 alpha:1.0],
+            @{ NSForegroundColorAttributeName : [UIColor colorWithRed:255.0/255.0 green:246.0/255.0 blue:229.0/255.0 alpha:1.0],
                NSFontAttributeName : [UIFont navBarTitleAvenir]
                }];
 }

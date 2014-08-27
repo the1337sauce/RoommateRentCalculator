@@ -10,12 +10,20 @@
 
 @implementation UIColor (RRCColors)
 
-+ (UIColor *)customDarkGreyColor {
-   return [UIColor colorWithRed:110.0/255.0 green:110.0/255.0 blue:110.0/255.0 alpha:1];
++ (UIColor*)labelBlueColor {
+   return [UIColor colorWithRed:33.0/255.0 green:133.0/255.0 blue:197.0/255.0 alpha:1];
 }
 
-+ (UIColor *)backgroundBlueColor{
-    return [UIColor colorWithRed:0.0/255.0 green:0.0/255.0 blue:123.0/255.0 alpha:1];
++ (UIColor*)backgroundGrayColor{
+    return [UIColor colorWithRed:62.0/255.0 green:69.0/255.0 blue:76.0/255.0 alpha:1];
+}
+
++ (UIColor*)lightTextColor{
+    return [UIColor colorWithRed:255.0/255.0 green:246.0/255.0 blue:229.0/255.0 alpha:1];
+}
+
++ (UIColor*) fadedRedColor{
+    return [UIColor colorWithRed:255.0/255.0 green:127.0/255.0 blue:102.0/255.0 alpha:1];
 }
 
 @end

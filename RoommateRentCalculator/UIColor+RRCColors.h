@@ -10,7 +10,9 @@
 
 @interface UIColor (RRCColors)
 
-+ (UIColor *)customDarkGreyColor;
-+ (UIColor *)backgroundBlueColor;
++ (UIColor*)labelBlueColor;
++ (UIColor*)backgroundGrayColor;
++ (UIColor*)lightTextColor;
++ (UIColor*)fadedRedColor;
 
 @end

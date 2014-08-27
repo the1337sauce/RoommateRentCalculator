@@ -16,7 +16,7 @@
         self.frame = [self offsetDefaultFrameByMultiplier:multiplier];
         self.textFieldDelegate = textFieldDelegate;
         [self buildAndAddSubViews];
-        [self setBackgroundColor:[UIColor backgroundBlueColor]];
+        [self setBackgroundColor:[UIColor backgroundGrayColor]];
     }
     return self;
 }
@@ -33,9 +33,9 @@
 
 -(UILabel*) roommatesNameLabel{
     UILabel *roommatesNameLabel = [[UILabel alloc] initWithFrame:CGRectMake(40, 15, 240, 30)];
-    [roommatesNameLabel setBackgroundColor:[UIColor customDarkGreyColor]];
-    [roommatesNameLabel setFont:[UIFont whiteAvenir]];
-    [roommatesNameLabel setTextColor:[UIColor whiteColor]];
+    [roommatesNameLabel setBackgroundColor:[UIColor labelBlueColor]];
+    [roommatesNameLabel setFont:[UIFont textFieldAvenir]];
+    [roommatesNameLabel setTextColor:[UIColor lightTextColor]];
     [roommatesNameLabel setText:@"Roommates Name"];
     [roommatesNameLabel setTextAlignment:NSTextAlignmentCenter];
     return roommatesNameLabel;
@@ -43,16 +43,18 @@
 
 -(void) configureRoommatesNameTextField{
     self.roommatesNameTextField = [[UITextField alloc] initWithFrame:CGRectMake(40, 45, 240, 30)];
-    [self.roommatesNameTextField setBackgroundColor:[UIColor whiteColor]];
+    [self.roommatesNameTextField setFont:[UIFont textFieldAvenir]];
+    [self.roommatesNameTextField setTextColor:[UIColor backgroundGrayColor]];
+    [self.roommatesNameTextField setBackgroundColor:[UIColor lightTextColor]];
     [self.roommatesNameTextField setBorderStyle:UITextBorderStyleNone];
     self.roommatesNameTextField.delegate = self.textFieldDelegate;
 }
 
 -(UILabel*) theirRoomSizeLabel{
     UILabel *theirRoomSizeLabel = [[UILabel alloc] initWithFrame:CGRectMake(40, 75, 240, 30)];
-    [theirRoomSizeLabel setBackgroundColor:[UIColor customDarkGreyColor]];
-    [theirRoomSizeLabel setFont:[UIFont whiteAvenir]];
-    [theirRoomSizeLabel setTextColor:[UIColor whiteColor]];
+    [theirRoomSizeLabel setBackgroundColor:[UIColor labelBlueColor]];
+    [theirRoomSizeLabel setFont:[UIFont textFieldAvenir]];
+    [theirRoomSizeLabel setTextColor:[UIColor lightTextColor]];
     [theirRoomSizeLabel setText:@"Their Room Size"];
     [theirRoomSizeLabel setTextAlignment:NSTextAlignmentCenter];
     return theirRoomSizeLabel;
@@ -60,7 +62,9 @@
 
 -(void) configureRoommatesRoomSqFtTextField{
     self.roommatesRoomSqFtTextField = [[UITextField alloc] initWithFrame:CGRectMake(40, 105, 194, 30)];
-    [self.roommatesRoomSqFtTextField setBackgroundColor:[UIColor whiteColor]];
+    [self.roommatesRoomSqFtTextField setFont:[UIFont textFieldAvenir]];
+    [self.roommatesRoomSqFtTextField setTextColor:[UIColor backgroundGrayColor]];
+    [self.roommatesRoomSqFtTextField setBackgroundColor:[UIColor lightTextColor]];
     [self.roommatesRoomSqFtTextField setBorderStyle:UITextBorderStyleNone];
     [self.roommatesRoomSqFtTextField setKeyboardType:UIKeyboardTypeDecimalPad];
     self.roommatesRoomSqFtTextField.delegate = self.textFieldDelegate;
@@ -68,9 +72,9 @@
 
 -(UILabel*) sqFtLabel{
     UILabel *sqFtLabel = [[UILabel alloc] initWithFrame:CGRectMake(234, 105, 46, 30)];
-    [sqFtLabel setBackgroundColor:[UIColor customDarkGreyColor]];
-    [sqFtLabel setFont:[UIFont whiteAvenir]];
-    [sqFtLabel setTextColor:[UIColor whiteColor]];
+    [sqFtLabel setBackgroundColor:[UIColor labelBlueColor]];
+    [sqFtLabel setFont:[UIFont textFieldAvenir]];
+    [sqFtLabel setTextColor:[UIColor lightTextColor]];
     [sqFtLabel setText:@"Sq/Ft"];
     [sqFtLabel setTextAlignment:NSTextAlignmentCenter];
     return sqFtLabel;

@@ -20,6 +20,14 @@
     [self disableAndHideNextButton];
     [self configureDismissButton];
 }
+
+-(void) viewDidDisappear:(BOOL)animated{
+    [self disableAndHideDismissButton];
+    [self disableAndHideNextButton];
+    [self.squareFeetTextField endEditing:YES];
+    [self.rentTextField endEditing:YES];
+}
+
 - (IBAction)addBedroomButtonWasPressed:(id)sender {
     [self incrementBedroomCount];
 }

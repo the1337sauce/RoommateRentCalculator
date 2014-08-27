@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
+#import "UIColor+RRCColors.h"
+
 @interface BedroomDetailsView : UIView
 
 @property (strong, nonatomic) UIButton* leftXOutButton;

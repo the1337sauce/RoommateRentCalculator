@@ -31,10 +31,10 @@
 -(void)configureLeftXOutButton{
     CGRect leftXOutButtonFrame = CGRectMake(0, [self calculateLeftXOutButtonYOrigin], 40, 39);
     self.leftXOutButton = [[UIButton alloc] initWithFrame:leftXOutButtonFrame];
-    self.leftXOutButton.backgroundColor = [UIColor colorWithRed:255.0/255.0 green:0/255.0 blue:0/255.0 alpha:1];
+    self.leftXOutButton.backgroundColor = [UIColor fadedRedColor];
     [self.leftXOutButton setTitle:@"X" forState:UIControlStateNormal];
-    [self.leftXOutButton.titleLabel setFont:[UIFont fontWithName:@"Avenir Heavy" size:17.0]];
-    [self.leftXOutButton.titleLabel setTextColor:[UIColor whiteColor]];
+    [self.leftXOutButton.titleLabel setFont:[UIFont fontWithName:@"Avenir-Medium" size:17.0]];
+    [self.leftXOutButton.titleLabel setTextColor:[UIColor lightTextColor]];
     [self disableAndHideLeftXButton];
     [self addSubview:self.leftXOutButton];
 }

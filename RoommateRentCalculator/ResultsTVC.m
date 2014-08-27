@@ -26,7 +26,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.tableView.backgroundColor = [UIColor colorWithRed:0.0/255.0 green:0.0/255.0 blue:123.0/255.0 alpha:1];
+    self.tableView.backgroundColor = [UIColor backgroundGrayColor];
     [self.headerView setCommonSpaceSqFtLabelTextForCommonSpace:self.apartmentRentCalculator.commonRoomSqFootage];
     [self.headerView setPricePerSqFtLabelTextForPricePerSqFt:self.apartmentRentCalculator.calculatePricePerSqFt];
 }
