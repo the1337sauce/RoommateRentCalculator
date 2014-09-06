@@ -19,13 +19,14 @@
     self.rentTextField.delegate = self;
     [self disableAndHideNextButton];
     [self configureDismissButton];
+    [self addShadowToView:self.bedroomCountLabel];
 }
 
 -(void) viewDidDisappear:(BOOL)animated{
     [self disableAndHideDismissButton];
     [self disableAndHideNextButton];
-    [self.squareFeetTextField endEditing:YES];
-    [self.rentTextField endEditing:YES];
+    self.squareFeetTextField.text = @"";
+    self.rentTextField.text = @"";
 }
 
 - (IBAction)addBedroomButtonWasPressed:(id)sender {
@@ -89,6 +90,16 @@
                      }
                      completion:nil] ;
 }
+
+-(void)addShadowToView:(UIView*) view {
+    CALayer *layer = view.layer;
+    layer.shadowOffset = CGSizeMake(1, 1);
+    layer.shadowColor = [[UIColor whiteColor] CGColor];
+    layer.shadowRadius = 4.0f;
+    layer.shadowOpacity = 0.80f;
+    layer.shadowPath = [[UIBezierPath bezierPathWithRect:layer.bounds] CGPath];
+}
+
 
 -(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     if([segue.identifier isEqualToString:@"Bedroom Details"]){

@@ -15,6 +15,7 @@
     [self configureBedroomDetailsScrollView];
     [self.view.leftXOutButton addTarget:self action:@selector(leftXOutButtonTapped) forControlEvents:UIControlEventTouchUpInside];
     [self registerKeyboardObservers];
+    [self configureResetBarButtonItem];
 }
 
 -(void) configureBedroomDetailsScrollView{
@@ -45,6 +46,17 @@
 
 -(CGSize) getKeyboardSizeFromNotification:(NSNotification*) notification{
      return [[[notification userInfo] objectForKey:UIKeyboardFrameBeginUserInfoKey] CGRectValue].size;
+}
+
+-(void)configureResetBarButtonItem{
+    UIBarButtonItem *resetBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Reset" style:UIBarButtonItemStylePlain target:self action:@selector(resetCalculator:)];
+    NSDictionary *textAttributes = [NSDictionary dictionaryWithObjectsAndKeys:[UIFont fontWithName:@"Avenir-Medium" size:17.0], NSFontAttributeName, nil];
+    [resetBarButtonItem setTitleTextAttributes:textAttributes forState:UIControlStateNormal];
+    [self.navigationItem setLeftBarButtonItem:resetBarButtonItem];
+}
+
+-(void)resetCalculator:(id)sender{
+    [self.navigationController popToRootViewControllerAnimated:YES];
 }
 
 #pragma mark - UITextFieldDelegate methods

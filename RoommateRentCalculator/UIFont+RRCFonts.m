@@ -15,7 +15,7 @@
 }
 
 +(UIFont*) navBarTitleAvenir{
-    return [UIFont fontWithName:@"Avenir-Medium" size:19.0];
+    return [UIFont fontWithName:@"Avenir-Heavy" size:20.0];
 }
 
 @end
