@@ -29,6 +29,59 @@
     self.tableView.backgroundColor = [UIColor backgroundGrayColor];
     [self.headerView setCommonSpaceSqFtLabelTextForCommonSpace:self.apartmentRentCalculator.commonRoomSqFootage];
     [self.headerView setPricePerSqFtLabelTextForPricePerSqFt:self.apartmentRentCalculator.calculatePricePerSqFt];
+    [self configureAboutBarButtonItem];
+    [self configureAboutView];
+    [self configureResetBarButtonItem];
+}
+
+-(void)configureAboutView{
+    self.aboutView = [[AboutView alloc] initWithFrame:CGRectMake(30, 30, 260, 420)];
+    self.aboutView.alpha = 0.0;
+    [self.view addSubview:self.aboutView];
+}
+
+-(void)configureAboutBarButtonItem{
+    UIBarButtonItem *aboutBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Info" style:UIBarButtonItemStylePlain target:self action:@selector(toggleDisplayingAboutDetails:)];
+    NSDictionary *textAttributes = [NSDictionary dictionaryWithObjectsAndKeys:[UIFont fontWithName:@"Avenir-Medium" size:17.0], NSFontAttributeName, nil];
+    [aboutBarButtonItem setTitleTextAttributes:textAttributes forState:UIControlStateNormal];
+    [self.navigationItem setRightBarButtonItem:aboutBarButtonItem];
+}
+
+-(void)configureResetBarButtonItem{
+    UIBarButtonItem *resetBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Reset" style:UIBarButtonItemStylePlain target:self action:@selector(resetCalculator:)];
+    NSDictionary *textAttributes = [NSDictionary dictionaryWithObjectsAndKeys:[UIFont fontWithName:@"Avenir-Medium" size:17.0], NSFontAttributeName, nil];
+    [resetBarButtonItem setTitleTextAttributes:textAttributes forState:UIControlStateNormal];
+    [self.navigationItem setLeftBarButtonItem:resetBarButtonItem];
+}
+
+-(void)resetCalculator:(id)sender{
+    [self.navigationController popToRootViewControllerAnimated:YES];
+}
+
+-(void)toggleDisplayingAboutDetails:(id) sender{
+    if(!self.currentlyDisplayingAboutView){
+        [self presentAboutView:YES];
+    }
+    else{
+        [self presentAboutView:NO];
+    }
+
+}
+
+-(void)presentAboutView:(BOOL) shouldPresent{
+    [UIView animateWithDuration:0.3
+                          delay:0.0
+                        options:UIViewAnimationOptionCurveEaseOut
+                     animations:^(void){
+                         if(shouldPresent){
+                             self.aboutView.alpha = 1.0;
+                             self.currentlyDisplayingAboutView = YES;
+                         } else{
+                             self.aboutView.alpha = 0.0;
+                             self.currentlyDisplayingAboutView = NO;
+                         }
+                     }
+                     completion:nil];
 }
 
 - (void)didReceiveMemoryWarning

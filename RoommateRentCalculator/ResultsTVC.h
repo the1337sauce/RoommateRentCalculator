@@ -10,11 +10,17 @@
 
 #import "ApartmentRentCalculator.h"
 #import "RoommateResultsCell.h"
-#import "ResultsHeaderView.h"
 #import "UIColor+RRCColors.h"
+#import "ResultsHeaderView.h"
+#import "AboutView.h"
+
 @interface ResultsTVC : UITableViewController
 
 @property (weak, nonatomic) IBOutlet ResultsHeaderView *headerView;
 @property (strong, nonatomic) ApartmentRentCalculator *apartmentRentCalculator;
+
+
+@property (nonatomic) BOOL currentlyDisplayingAboutView;
+@property (strong, nonatomic) UIView *aboutView;
 
 @end
