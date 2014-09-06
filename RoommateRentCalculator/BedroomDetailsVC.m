@@ -16,6 +16,7 @@
     [self.view.leftXOutButton addTarget:self action:@selector(leftXOutButtonTapped) forControlEvents:UIControlEventTouchUpInside];
     [self registerKeyboardObservers];
     [self configureResetBarButtonItem];
+    [self.navigationItem.rightBarButtonItem setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIFont barButtonItemFont], NSFontAttributeName, nil] forState:UIControlStateNormal];
 }
 
 -(void) configureBedroomDetailsScrollView{
@@ -50,7 +51,7 @@
 
 -(void)configureResetBarButtonItem{
     UIBarButtonItem *resetBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Reset" style:UIBarButtonItemStylePlain target:self action:@selector(resetCalculator:)];
-    NSDictionary *textAttributes = [NSDictionary dictionaryWithObjectsAndKeys:[UIFont fontWithName:@"Avenir-Medium" size:17.0], NSFontAttributeName, nil];
+    NSDictionary *textAttributes = [NSDictionary dictionaryWithObjectsAndKeys:[UIFont barButtonItemFont], NSFontAttributeName, nil];
     [resetBarButtonItem setTitleTextAttributes:textAttributes forState:UIControlStateNormal];
     [self.navigationItem setLeftBarButtonItem:resetBarButtonItem];
 }

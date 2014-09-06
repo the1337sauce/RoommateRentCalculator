@@ -42,14 +42,14 @@
 
 -(void)configureAboutBarButtonItem{
     UIBarButtonItem *aboutBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Info" style:UIBarButtonItemStylePlain target:self action:@selector(toggleDisplayingAboutDetails:)];
-    NSDictionary *textAttributes = [NSDictionary dictionaryWithObjectsAndKeys:[UIFont fontWithName:@"Avenir-Medium" size:17.0], NSFontAttributeName, nil];
+    NSDictionary *textAttributes = [NSDictionary dictionaryWithObjectsAndKeys:[UIFont barButtonItemFont], NSFontAttributeName, nil];
     [aboutBarButtonItem setTitleTextAttributes:textAttributes forState:UIControlStateNormal];
     [self.navigationItem setRightBarButtonItem:aboutBarButtonItem];
 }
 
 -(void)configureResetBarButtonItem{
     UIBarButtonItem *resetBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Reset" style:UIBarButtonItemStylePlain target:self action:@selector(resetCalculator:)];
-    NSDictionary *textAttributes = [NSDictionary dictionaryWithObjectsAndKeys:[UIFont fontWithName:@"Avenir-Medium" size:17.0], NSFontAttributeName, nil];
+    NSDictionary *textAttributes = [NSDictionary dictionaryWithObjectsAndKeys:[UIFont barButtonItemFont], NSFontAttributeName, nil];
     [resetBarButtonItem setTitleTextAttributes:textAttributes forState:UIControlStateNormal];
     [self.navigationItem setLeftBarButtonItem:resetBarButtonItem];
 }
@@ -108,7 +108,7 @@
     RoommateResultsCell *cell = (RoommateResultsCell*)[tableView dequeueReusableCellWithIdentifier:@"Rent Cell" forIndexPath:indexPath];
     Roommate *thisRowsRoommate = self.apartmentRentCalculator.roommates[indexPath.row];
     NSMutableString *rentResult = [NSMutableString stringWithString:thisRowsRoommate.name];
-    [rentResult appendString:@"'s monthly rent is $"];
+    [rentResult appendString:@"'s rent is $"];
     [rentResult appendString:[[NSNumber numberWithLong:thisRowsRoommate.rent] stringValue]];
     cell.textLabel.text = rentResult;
     return cell;

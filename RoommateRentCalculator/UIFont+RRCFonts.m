@@ -18,4 +18,7 @@
     return [UIFont fontWithName:@"Avenir-Heavy" size:20.0];
 }
 
++(UIFont*) barButtonItemFont{
+    return [UIFont fontWithName:@"Avenir-Medium" size:17.0];
+}
 @end

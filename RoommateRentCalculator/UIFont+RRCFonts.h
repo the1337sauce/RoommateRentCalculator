@@ -12,5 +12,6 @@
 
 +(UIFont*) textFieldAvenir;
 +(UIFont*) navBarTitleAvenir;
++(UIFont*) barButtonItemFont;
 
 @end

@@ -11,6 +11,7 @@
 #import "ApartmentRentCalculator.h"
 #import "RoommateResultsCell.h"
 #import "UIColor+RRCColors.h"
+#import "UIFont+RRCFonts.h"
 #import "ResultsHeaderView.h"
 #import "AboutView.h"
 
