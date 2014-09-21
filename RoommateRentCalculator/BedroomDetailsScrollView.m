@@ -50,7 +50,7 @@
                           delay:0.0
                         options:UIViewAnimationOptionCurveEaseOut
                      animations:^{
-                        self.frame = CGRectMake(self.frame.origin.x, self.frame.origin.y, self.frame.size.width, self.frame.size.height-keyboardHeight);
+                         self.contentInset = UIEdgeInsetsMake(0, 0, keyboardHeight+20, 0);
                      }
                      completion:nil];
 }
