@@ -43,6 +43,7 @@
 
 -(void) configureRoommatesNameTextField{
     self.roommatesNameTextField = [[UITextField alloc] initWithFrame:CGRectMake(40, 45, 240, 30)];
+    self.roommatesNameTextField.autocorrectionType = UITextAutocorrectionTypeNo;
     [self.roommatesNameTextField setFont:[UIFont textFieldAvenir]];
     [self.roommatesNameTextField setTextColor:[UIColor backgroundGrayColor]];
     [self.roommatesNameTextField setBackgroundColor:[UIColor lightTextColor]];
